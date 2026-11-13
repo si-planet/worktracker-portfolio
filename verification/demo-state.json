@@ -1,0 +1,29 @@
+{
+  "scope": "Public importance identity and interactive mutation timestamps",
+  "status": "local-verified-browser-pending",
+  "baselineReproduction": {
+    "defaultImportanceMovedAfterFirstExampleDeletion": 2,
+    "completionUsedFixedOctoberTimestamp": true
+  },
+  "corrections": [
+    "Default importance follows original example IDs; saved true/false/null preferences remain intact",
+    "Only interactive runtime mutations use an injected current clock; seed and default fixture clock remain deterministic"
+  ],
+  "checks": {
+    "targetedStateCases": 19,
+    "relatedAdapterChecks": 122,
+    "relatedSeedChecks": 13
+  },
+  "preservation": [
+    "Original24 synthetic examples unchanged",
+    "Existing user-selected importance preserved",
+    "Existing saved work timestamps are not migrated or rewritten",
+    "No date-input or operating product changes",
+    "Public JSON download remains a partial work-data export, not a full backup"
+  ],
+  "browser": {
+    "status": "pending",
+    "scope": "Native confirmation recovery and post-build UI verification belong to main reviewer"
+  },
+  "productionModified": false
+}

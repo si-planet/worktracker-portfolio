@@ -3,9 +3,10 @@ import {basePath,logicalPath,routeURL,demoURL,allowedDemoPath} from './route';
 import { createCategoryApi } from './category-api.mjs';
 import { fixture, companyId, projectId, project, tags } from './fixture';
 import { restoreMonthSeed } from './month-seed';
+import { restoreImportance } from './importance-state';
 const key=`wt-portfolio-demo-v4:${basePath}`;
 let handler: (route:any)=>Promise<any>;
-const {state}=await fixture({route:async(_pattern,fn)=>{handler=fn;}});
+const {state}=await fixture({route:async(_pattern,fn)=>{handler=fn;}}, {now:()=>Date.now()});
 let saved:unknown;try{saved=JSON.parse(localStorage.getItem(key)||'null');}catch{}
 const restored=restoreMonthSeed(saved);
 state.entries=restored.entries;
@@ -14,7 +15,8 @@ const json=(value:any,status=200)=>new Response(JSON.stringify(value),{status,he
 const persist=()=>{try{localStorage.setItem(key,JSON.stringify({entries:state.entries,colors,seedVersion:restored.seedVersion}));}catch{}};
 if(restored.shouldPersist)persist();
 const categories=createCategoryApi({companyId,projects:[project],tags,initial:(()=>{try{return JSON.parse(localStorage.getItem(key+'-categories')||'{}')||{};}catch{return {};}})(),save:(value:any)=>localStorage.setItem(key+'-categories',JSON.stringify(value))});
-let importance:Record<string,any>=Object.fromEntries(state.entries.filter((_,i)=>[0,5].includes(i)).map(e=>[e.id,{workEntryId:e.id,importance:true,version:1}]));try{const saved=JSON.parse(localStorage.getItem(key+'-importance')||'null');if(saved&&typeof saved==='object')importance=saved;}catch{}
+let savedImportance:unknown;try{savedImportance=JSON.parse(localStorage.getItem(key+'-importance')||'null');}catch{}
+const importance=restoreImportance(state.entries,savedImportance);
 
 globalThis.fetch=async(input,init)=>{
  const u=new URL(input instanceof Request?input.url:String(input),location.href);

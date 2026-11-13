@@ -83,7 +83,7 @@ export const duplicateSnapshot = (entry: WorkEntryFinal) =>
     wbs: { entryId: entry.id, sourceEntryVersion: entry.version, link: null, target: null },
   });
 export const url = `/c/${companyId}/week?year=2026&projectId=${projectId}&date=${date}`;
-export async function fixture(page: Page) {
+export async function fixture(page: Page, options: { now?: () => number } = {}) {
   const state = {
     userId: 'work-user-a',
     authenticated: true,
@@ -109,9 +109,15 @@ export async function fixture(page: Page) {
     weekQueries: [] as URLSearchParams[],
     now: at,
   };
+  // Tests retain the historical fixed clock unless a runtime clock is supplied.
+  const mutationNow = () => options.now?.() ?? state.now;
   const changes = new Map<string, unknown[]>();
-  const record = (before: WorkEntryFinal | null, after: WorkEntryFinal, changeType: string) => {
-    if (before && !changes.has(after.id)) record(null, before, 'create');
+  const record = (
+    before: WorkEntryFinal | null, after: WorkEntryFinal, changeType: string,
+    changedAt = mutationNow(),
+  ) => {
+    if (before && !changes.has(after.id))
+      record(null, before, 'create', options.now ? before.createdAt : state.now);
     const history = changes.get(after.id) ?? [];
     history.push({
       id: crypto.randomUUID(),
@@ -122,7 +128,7 @@ export async function fixture(page: Page) {
       before: before ? workEntrySnapshot(before) : null,
       after: workEntrySnapshot(after),
       reason: null,
-      changedAt: state.now,
+      changedAt,
     });
     changes.set(after.id, history);
   };
@@ -168,6 +174,9 @@ export async function fixture(page: Page) {
   const add = (body: unknown) => {
     const parsed = zWorkEntryCreate.parse(body);
     const row = task();
+    const createdAt = options.now ? mutationNow() : at;
+    row.createdAt = createdAt;
+    row.updatedAt = createdAt;
     for (const [key, value] of Object.entries(parsed))
       if (key in row && key !== 'leave') Object.assign(row, { [key]: value });
     row.leave = null;
@@ -186,12 +195,13 @@ export async function fixture(page: Page) {
       row.allDay = amount.allDay;
       Object.assign(
         row,
-        normalizeLeaveState({ plannedDate: parsed.plannedDate!, status: parsed.status }, null, at),
+        normalizeLeaveState({ plannedDate: parsed.plannedDate!, status: parsed.status }, null, createdAt),
       );
       state.dayVersion = (state.dayVersion ?? 0) + 1;
     }
+    if (options.now && row.kind !== 'leave' && row.status === 'done') row.completedAt = createdAt;
     state.entries.push(row);
-    record(null, row, 'create');
+    record(null, row, 'create', options.now ? createdAt : state.now);
     return row;
   };
   await page.route('**/api/**', async (route) => {
@@ -499,7 +509,7 @@ export async function fixture(page: Page) {
                 before: null,
                 after: workEntrySnapshot(row),
                 reason: null,
-                changedAt: at,
+                changedAt: row.createdAt,
               },
             ],
           },
@@ -514,6 +524,7 @@ export async function fixture(page: Page) {
         return route.fulfill({ json: { deleted: true, id: row.id } });
       }
       state.patches.push(body);
+      const changedAt = mutationNow();
       const before = structuredClone(row);
       for (const [key, value] of Object.entries(body))
         if (key in row && key !== 'version') Object.assign(row, { [key]: value });
@@ -539,7 +550,7 @@ export async function fixture(page: Page) {
               status: before.status as 'planned' | 'done' | 'canceled',
               completedAt: before.completedAt,
             },
-            state.now,
+            changedAt,
           ),
         );
         state.dayVersion = (state.dayVersion ?? 0) + 1;
@@ -548,10 +559,10 @@ export async function fixture(page: Page) {
           row.status === 'done'
             ? before.status === 'done'
               ? before.completedAt
-              : state.now
+              : changedAt
             : null;
       row.version++;
-      row.updatedAt = at + 1;
+      row.updatedAt = options.now ? changedAt : at + 1;
       record(
         before,
         row,
@@ -562,6 +573,7 @@ export async function fixture(page: Page) {
             : row.kind !== before.kind
               ? 'edit'
               : 'status',
+        changedAt,
       );
       return route.fulfill({ json: row });
     }
