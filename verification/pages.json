@@ -21,12 +21,34 @@
     "Reload preserves completion",
     "Week card reflects completed synthetic test task"
   ],
-  "limitations": [
+  "productionDataTouched": false,
+  "paidServicesUsed": false,
+  "initialLimitations": [
     "Reset confirmation could not be accepted or inspected because browser control became unresponsive; reset is not reported as passed.",
     "One synthetic test task may remain only in the verification browser local storage; source fixture remains ten tasks.",
     "Real mobile device and complete feature regression not performed in this deployment check.",
     "Verification tab cleanup could not be confirmed after the reset dialog timeout."
   ],
-  "productionDataTouched": false,
-  "paidServicesUsed": false
+  "uiFollowup": {
+    "runtimeCommit": "f4ed396a2ca3dfda5875788d735c90f7b456137b",
+    "pullRequest": "https://github.com/si-planet/worktracker-portfolio/pull/1",
+    "deploymentRun": "https://github.com/si-planet/worktracker-portfolio/actions/runs/43385910699",
+    "liveAssetHashesMatched": 8,
+    "fixtureEntries": 24,
+    "browserPassed": [
+      "Centered month header and duplicate query controls removed",
+      "Existing browser entries preserved and 14 additional synthetic examples added once",
+      "Prior synthetic test entry removed; month total24 survives reload",
+      "Daily detail navigation and editor still open; duplicate view/today/document query controls absent",
+      "375px CSS viewport has no horizontal overflow"
+    ],
+    "limitations": [
+      "Real phone and complete feature regression were not performed",
+      "Reset native confirmation remains unverified; prior test item was removed through its individual delete UI"
+    ]
+  },
+  "limitations": [
+    "Real phone and complete feature regression were not performed",
+    "Reset native confirmation remains unverified; prior test item was removed through its individual delete UI"
+  ]
 }
