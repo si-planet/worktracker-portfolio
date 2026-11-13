@@ -11,6 +11,9 @@ const out = path.resolve(root, process.env.DEMO_OUTPUT || 'docs');
 if (!out.startsWith(root + path.sep) || ['web', 'shared', 'demo', 'scripts', 'public', 'verification'].includes(path.relative(root, out).split(path.sep)[0])) throw Error('Use docs or a separate output directory inside this repository.');
 const adapted = [];
 const routeAdapter = {name: 'portfolio-routing', setup(build) {
+  build.onResolve({filter: /^\.\.\/shared\/workspace-calendar-navigation$/}, args => {
+    if (args.importer === path.join(root, 'web/workspace-shell.tsx')) return {path: path.join(root, 'demo/workspace-calendar-navigation.ts')};
+  });
   build.onResolve({filter: /^\.\/wbs-excel-import-model$/}, () => ({path: path.join(root, 'demo/wbs-import-stub.ts')}));
   build.onLoad({filter: /\.(?:ts|tsx)$/}, args => {
     if (!args.path.startsWith(path.join(root, 'web') + path.sep)) return;

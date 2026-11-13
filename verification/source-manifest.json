@@ -831,6 +831,10 @@
     {
       "file": "web/help-hint.css",
       "sha256": "11a665851d2d5a687915899392ada378f16a08b3b047ede589e7c1df573cbd05"
+    },
+    {
+      "file": "shared/workspace-calendar-navigation.ts",
+      "sha256": "bb1498f1a736314ee389263ad6f4566fc87c22e07b5b4e2d986e2d10556be296"
     }
   ],
   "description": "UI source snapshot used by the synthetic portfolio demo. Hashes verify preservation, not production deployment status.",
@@ -856,8 +860,8 @@
     },
     {
       "file": "web/category-color-control.css",
-      "sha256": "9f08cf325ceb50d842f428da4573831e6b1b3312f41429029b6be860b3e4eaa8",
-      "reason": "User-reviewed calendar, daily controls, and category-size correction; matching production UI handoff prepared separately."
+      "sha256": "64aaf289328edef727bc70e6ff35f07ebf4dddd632189452b624f29c82dfbb6f",
+      "reason": "Preserve calendar date/project across outer navigation and category selection in forced-colors mode, aligned with reviewed product behavior."
     },
     {
       "file": "web/day-navigation.tsx",
@@ -873,6 +877,11 @@
       "file": "web/period-document.tsx",
       "sha256": "3be793663e029f4bbd6c2c5c3d5c4343132ad65bc6fb80b05ab988760ea49c55",
       "reason": "Daily navigation and integrated memo refresh aligned with validated product behavior; no product data or private Git history included."
+    },
+    {
+      "file": "web/workspace-shell.tsx",
+      "sha256": "3abe9d7077f29b7b68329daef4a05d27264ce6af6df210b6f32e1b078a46df68",
+      "reason": "Preserve calendar date/project across outer navigation and category selection in forced-colors mode, aligned with reviewed product behavior."
     }
   ]
 }

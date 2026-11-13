@@ -6,7 +6,7 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "start": "python3 scripts/serve.py --directory docs",
-    "test": "node scripts/test-adapters.mjs && node scripts/test-month-seed.mjs && python3 scripts/test-hosting.py",
+    "test": "node scripts/test-adapters.mjs && node scripts/test-month-seed.mjs && node scripts/test-calendar-navigation.mjs && python3 scripts/test-hosting.py",
     "audit": "python3 scripts/audit.py",
     "check": "npm test && npm run audit"
   },
