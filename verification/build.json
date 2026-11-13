@@ -42,11 +42,11 @@
     },
     {
       "file": "app.js",
-      "sha256": "2ad13e6a6d14f2aafd40f880b430a2931ff0c56e9a1dfc0fbeebd02764da5c92"
+      "sha256": "4e7a10d892d368ab07ffd22f97cdfc4764bf4485b76c7872b3fe980df9311374"
     },
     {
       "file": "app.css",
-      "sha256": "09da8f20fec1ccea7828c7b41273cfa9bc909e3657cc9bc1a13285f496a964f7"
+      "sha256": "33629ea78a4404a99dccbddb6d79390fdc763653b35c5146b848eace322208b9"
     },
     {
       "file": "demo/banner.css",

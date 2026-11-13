@@ -880,3 +880,18 @@
     content: '';
   }
 }
+
+/* Keep the month/week phrase and ISO-week marker intact on narrow screens. */
+.work-panel.work-layout .week-view .week-sheet-period h3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 6px;
+  min-width: 0;
+  overflow-wrap: normal;
+  word-break: keep-all;
+}
+.week-sheet-period-label {
+  display: inline-block;
+  white-space: nowrap;
+}

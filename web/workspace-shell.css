@@ -690,3 +690,13 @@
   color: var(--muted);
   font-size: 11px;
 }
+
+/* Match the primary mobile control target while keeping the desktop filter compact. */
+@media (max-width: 600px), (pointer: coarse) {
+  .workspace-project-filter .form-field select {
+    box-sizing: border-box;
+    min-height: 44px;
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "filesChecked": 253,
+  "filesChecked": 256,
   "sourceFiles": 209,
   "deployedAssets": 8,
   "modifiedSourceFiles": [
@@ -9,8 +9,11 @@
     "web/month-view.css",
     "web/month-view.tsx",
     "web/period-document.tsx",
+    "web/week-view.css",
+    "web/week-view.tsx",
     "web/work-color-picker.tsx",
     "web/work-entries.tsx",
+    "web/workspace-shell.css",
     "web/workspace-shell.tsx"
   ],
   "findings": [],
