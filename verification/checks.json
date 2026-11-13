@@ -12,7 +12,7 @@
     "react-dom": "19.3.0",
     "zod": "4.4.3"
   },
-  "scope": "Executed locally against reused matching dependencies. Clean full npm install, live GitHub Pages and real phone not tested.",
+  "scope": "Local adapter, seed migration, HTTP and source/build checks. Live deployment verification is separately recorded in pages.json; real phone testing is not included.",
   "browserAcceptance": {
     "chrome": [
       "Nested path docs/ opens synthetic10 task month view.",
@@ -26,5 +26,22 @@
       "Demo reset native confirmation could not be completed due browser control timeout; local-only extra synthetic test item may remain in verification browser.",
       "Live GitHub Pages, real phone, clean full npm install remain untested."
     ]
+  },
+  "monthSeedChecks": 13,
+  "uiFollowup": {
+    "fixtureEntries": 24,
+    "calendarWeeks": 5,
+    "multiDayEntries": 9,
+    "desktopCssWidth": 1265,
+    "mobileRequestedWidth": 390,
+    "mobileCssWidth": 375,
+    "horizontalOverflow": false,
+    "desktopTitleCentered": true,
+    "desktopColorControlHeight": 40,
+    "mobileColorControlHeight": 44,
+    "colorSaveReload": "passed; default restored",
+    "dailyControls": "passed: date movement retained, duplicate views/today/document reload removed, current edit help shown",
+    "unsavedDailyMemoSurvivesRefresh": true,
+    "browserConsoleErrors": 0
   }
 }
