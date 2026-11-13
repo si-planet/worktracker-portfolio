@@ -38,9 +38,9 @@ export type PeriodDocumentProps = {
   userId: string;
   kind: PeriodDocumentKind;
   periodStart: string;
-  refreshKey?: number;
   editing: boolean;
   reportEntry?: boolean;
+  externalRefresh?: number;
   mobileControls?: ReactNode;
   primaryAction?: ReactNode;
   online: boolean;
@@ -85,9 +85,9 @@ function PeriodDocumentScopeEditor({
   userId,
   kind,
   periodStart,
-  refreshKey = 0,
   editing,
   reportEntry = false,
+  externalRefresh,
   mobileControls,
   primaryAction,
   online,
@@ -252,8 +252,8 @@ function PeriodDocumentScopeEditor({
     };
   }, []);
   useEffect(() => {
-    void read();
-  }, [online, refreshKey]);
+    void read(externalRefresh !== undefined && !!current.current?.pending);
+  }, [online, externalRefresh]);
   useEffect(() => {
     setWorkspaceDraftDirty(key, dirty);
     return () => setWorkspaceDraftDirty(key, false);
@@ -394,11 +394,6 @@ function PeriodDocumentScopeEditor({
     return error ? '문서를 불러오지 못했습니다. 다시 조회해 주세요.' : '문서를 조회해 주세요.';
   }
   const label = labels[kind];
-  const readLabel = draft?.pending
-    ? '저장 결과 확인'
-    : kind === 'daily_note'
-      ? '메모 다시 불러오기'
-      : '문서 조회';
   return (
     <section
       className={`period-document${entry ? ' weekly-report-entry' : ''}${entry && reportView === 'list' ? ' is-report-list' : ''}${entry && server?.document === null && !dirty && !error && !busy ? ' is-empty' : ''}`}
@@ -490,17 +485,17 @@ function PeriodDocumentScopeEditor({
           <h3 ref={heading} tabIndex={-1}>
             {label}
           </h3>
-          {(kind !== 'daily_note' || error || draft?.pending || draft?.conflicted) && (
+          {externalRefresh === undefined && (
             <RefreshButton
               type="button"
               disabled={busy || !online}
               onClick={() => void read(!!draft?.pending)}
               busy={!!busy}
-              showLabel={kind !== 'daily_note'}
-              aria-label={readLabel}
-              title={readLabel}
+              showLabel
+              aria-label={draft?.pending ? '저장 결과 확인' : '문서 조회'}
+              title={draft?.pending ? '저장 결과 확인' : '문서 조회'}
             >
-              {readLabel}
+              {draft?.pending ? '저장 결과 확인' : '문서 조회'}
             </RefreshButton>
           )}
         </div>

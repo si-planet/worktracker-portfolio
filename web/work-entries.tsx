@@ -2800,15 +2800,6 @@ export function WorkEntriesPanel({
                           날짜 미정으로
                         </button>
                       )}
-                      {!dateLocked &&
-                        original?.kind === 'task' &&
-                        ['doing', 'done'].includes(original.status) && (
-                          <HelpHint label="날짜 미정으로 변경">
-                            {dayView
-                              ? '진행 상태를 미진행으로 저장한 뒤 업무를 다시 열면 날짜 미정으로 바꿀 수 있습니다.'
-                              : '목록에서 미진행으로 변경한 뒤 업무를 다시 열면 날짜 미정으로 바꿀 수 있습니다.'}
-                          </HelpHint>
-                        )}
                       <label>
                         업무 프로젝트{form.kind === 'task' ? ' (필수)' : ' (선택)'}
                         <select
@@ -3109,8 +3100,8 @@ export function WorkEntriesPanel({
                   companyId={companyId}
                   userId={userId}
                   kind="daily_note"
+                  externalRefresh={refresh}
                   periodStart={date}
-                  refreshKey={refresh}
                   editing={true}
                   online={online}
                   onExpired={expired}
