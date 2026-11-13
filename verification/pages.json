@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-11-13T06:43:11.919284+00:00",
+  "url": "https://si-planet.github.io/worktracker-portfolio/",
+  "provider": "GitHub Pages",
+  "source": {
+    "branch": "main",
+    "path": "/docs"
+  },
+  "httpsVerified": true,
+  "httpsEnforced": true,
+  "initialDeploymentRun": "https://github.com/si-planet/worktracker-portfolio/actions/runs/43380019083",
+  "runtimeCommit": "8d693d6f4281ac0e6d3f0fdfcd4b658cde1d7324",
+  "liveAssetHashesMatched": 8,
+  "browser": "ChatGPT in-app browser",
+  "passed": [
+    "Synthetic ten-task monthly view loads without login",
+    "Month to day to week navigation",
+    "Day and week deep-route reload",
+    "Synthetic task creation",
+    "Mark task completed",
+    "Reload preserves completion",
+    "Week card reflects completed synthetic test task"
+  ],
+  "limitations": [
+    "Reset confirmation could not be accepted or inspected because browser control became unresponsive; reset is not reported as passed.",
+    "One synthetic test task may remain only in the verification browser local storage; source fixture remains ten tasks.",
+    "Real mobile device and complete feature regression not performed in this deployment check.",
+    "Verification tab cleanup could not be confirmed after the reset dialog timeout."
+  ],
+  "productionDataTouched": false,
+  "paidServicesUsed": false
+}

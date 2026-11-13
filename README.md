@@ -7,13 +7,23 @@
 - JSON 내려받기는 업무와 업무 색상만 포함
 - 로그인·계정 관리·실제 WBS 가져오기·서버 저장·문서 확정은 비활성
 
-## 바로 열기 / 공개하기
+## 웹 데모
+
+**[Work Tracker 데모 열기](https://si-planet.github.io/worktracker-portfolio/)**
+
+복사할 주소: `https://si-planet.github.io/worktracker-portfolio/`
+
+로그인 없이 가상 업무를 체험할 수 있습니다. 수정 내용은 현재 브라우저에만 저장되며 실제 서비스나 다른 기기와 동기화되지 않습니다.
+
+2026-11-13 공개 주소에서 월간 → 일간 → 주간 이동, 상세 주소 새로고침, 가상 업무 추가·완료·새로고침 유지와 배포 자산 8개의 해시를 확인했습니다. 브라우저 확인창 제어가 응답하지 않아 데모 초기화 수락 결과는 미검증이며, 실휴대폰 검수는 별도입니다. [배포 검증 기록](verification/pages.json)
+
+## 실행 / 게시 설정
 
 `docs/`에 미리 빌드한 정적 파일이 포함되어 있습니다. GitHub Pages에서 **Deploy from a branch → main → /docs**를 선택하면 됩니다. 저장소 이름을 바꿔도 빌드 설정 수정이 필요하지 않습니다. 공유 링크는 `/#/c/…/day?date=…` 형태이며 새로고침도 동작합니다.
 
 공개 소스: [si-planet/worktracker-portfolio](https://github.com/si-planet/worktracker-portfolio). 비공개 이력 없이 정제한 파일로 새 이력을 시작했습니다.
 
-웹 데모 게시·검사·업데이트 절차는 [GitHub Pages 안내](PUBLISH.md)에 있습니다. 소스 업로드와 웹 사이트 배포는 별도이며, 실제 사이트 주소는 배포 확인 후 추가합니다.
+웹 데모는 GitHub Pages의 `main /docs`에서 게시됩니다. 이후 게시·검사·업데이트 절차는 [GitHub Pages 안내](PUBLISH.md)에 있습니다.
 
 로컬 실행은 Python 3만 필요합니다.
 

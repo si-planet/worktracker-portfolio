@@ -28,7 +28,13 @@ git push -u origin main
 
 위 `<...>`는 GitHub가 보여 주는 본인의 새 저장소 주소로 교체합니다. 비공개 브랜치 자체를 공개 저장소로 push하지 않습니다.
 
-## 웹 데모 켜기
+## 현재 웹 데모
+
+주소: https://si-planet.github.io/worktracker-portfolio/
+
+2026-11-13 GitHub Pages 배포 성공과 HTTPS 접근을 확인했습니다. 게시 원본은 `main /docs`, HTTPS 강제 사용입니다. 이후 `docs/` 변경을 main에 push하면 Pages가 갱신합니다. 사용자 정의 CI는 추가하지 않았습니다.
+
+## 다른 저장소에서 웹 데모 켜기
 
 1. 새 저장소의 Settings → Pages를 엽니다.
 2. Source: **Deploy from a branch**를 선택합니다.
