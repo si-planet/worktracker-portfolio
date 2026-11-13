@@ -882,6 +882,21 @@
       "file": "web/workspace-shell.tsx",
       "sha256": "3abe9d7077f29b7b68329daef4a05d27264ce6af6df210b6f32e1b078a46df68",
       "reason": "Preserve calendar date/project across outer navigation and category selection in forced-colors mode, aligned with reviewed product behavior."
+    },
+    {
+      "file": "web/workspace-shell.css",
+      "sha256": "33d445cf99abd757e52494b6f3d6b2ad58c70757ad05c5fcc61663086c3111fc",
+      "reason": "Mobile project filter touch target and grouped week title prevent narrow-screen usability regressions. Product handoff is documented separately."
+    },
+    {
+      "file": "web/week-view.tsx",
+      "sha256": "cb5ad51d6f548514cc8e91962bde1db96145ca2bc00ef03239f0e72d2ca0151b",
+      "reason": "Mobile project filter touch target and grouped week title prevent narrow-screen usability regressions. Product handoff is documented separately."
+    },
+    {
+      "file": "web/week-view.css",
+      "sha256": "ccf17dca9c64f88e2288c93b6b387ca643ec217cb68ac0df3174f3dc6d4feeb1",
+      "reason": "Mobile project filter touch target and grouped week title prevent narrow-screen usability regressions. Product handoff is documented separately."
     }
   ]
 }

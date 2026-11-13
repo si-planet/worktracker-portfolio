@@ -298,9 +298,15 @@ export function WeekView({
           >
             ◀
           </button>
-          <h3>
+          <h3
+            aria-label={calendar ? displayWeekLabel(date).replace('년 ', ' ').replace(/주\)$/, '주차)') : undefined}
+          >
             {calendar
-              ? displayWeekLabel(date).replace('년 ', ' ').replace(/주\)$/, '주차)')
+              ? displayWeekLabel(date)
+                  .replace('년 ', ' ')
+                  .replace(/주\)$/, '주차)')
+                  .split(/ (?=\()/)
+                  .map((part) => <span className="week-sheet-period-label" key={part}>{part}</span>)
               : '주간 범위를 표시할 수 없습니다.'}
           </h3>
           <button

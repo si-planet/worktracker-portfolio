@@ -11,6 +11,9 @@ const out = path.resolve(root, process.env.DEMO_OUTPUT || 'docs');
 if (!out.startsWith(root + path.sep) || ['web', 'shared', 'demo', 'scripts', 'public', 'verification'].includes(path.relative(root, out).split(path.sep)[0])) throw Error('Use docs or a separate output directory inside this repository.');
 const adapted = [];
 const routeAdapter = {name: 'portfolio-routing', setup(build) {
+  build.onResolve({filter: /^\.\/month-schedule-create$/}, args => {
+    if (args.importer.startsWith(path.join(root, 'web') + path.sep)) return {path: path.join(root, 'demo/month-schedule-create.tsx')};
+  });
   build.onResolve({filter: /^\.\/period-document$/}, args => {
     if (args.importer.startsWith(path.join(root, 'web') + path.sep)) return {path: path.join(root, 'demo/period-document.tsx')};
   });
@@ -22,6 +25,7 @@ const routeAdapter = {name: 'portfolio-routing', setup(build) {
     if (!args.path.startsWith(path.join(root, 'web') + path.sep)) return;
     let code = fs.readFileSync(args.path, 'utf8');
     const before = code;
+    if (args.path === path.join(root, 'web/month-view.tsx')) code = code.replace('1회성 또는 반복 일정 추가', '가상 1회성 일정 추가');
     code = code.replace(/\b(?:window\.)?location\.(pathname|search|hash|href|assign|replace)\b/g, '__demoLocation.$1')
       .replace(/\b(?:window\.)?history\.(pushState|replaceState)\b/g, '__demoHistory.$1');
     if (code !== before) {

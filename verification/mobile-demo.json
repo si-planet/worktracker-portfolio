@@ -1,0 +1,54 @@
+{
+  "scope": "Public demo recurring-schedule boundary and narrow-screen layout",
+  "status": "local-browser-verified-not-published",
+  "changes": [
+    "One-time schedule adapter hides unsupported repeat mode without changing product recurrence source",
+    "Mobile project selector min-height44px",
+    "Week heading wraps between date and ISO-week groups"
+  ],
+  "checks": {
+    "publicScheduleDialogSSR": 8,
+    "routeAdapters": 122,
+    "monthSeed": 13,
+    "calendarNavigation": 60,
+    "staticHttp": 34
+  },
+  "browser": {
+    "status": "passed",
+    "surface": "IAB desktop browser with mobile viewport, not a physical phone",
+    "requestedWidths": [
+      320,
+      390
+    ],
+    "observedCssWidths": [
+      305,
+      375
+    ],
+    "projectSelectHeightPx": 44,
+    "recurringModeButtonVisible": false,
+    "oneTimeScopeVisible": true,
+    "syntheticScheduleCreate": {
+      "beforeRecords": 24,
+      "afterRecords": 25,
+      "monthlyUpdated": true,
+      "dailyNavigation": true
+    },
+    "syntheticScheduleCleanup": {
+      "deleted": true,
+      "preexistingDayRecordsPreserved": 2
+    },
+    "weekTitle": {
+      "narrow": "two nowrap groups on separate lines, each27px high",
+      "wide": "two groups on one line",
+      "accessibleName": "space-preserving aria-label added"
+    },
+    "horizontalOverflow": false,
+    "dailyNoteScopePreserved": true,
+    "consoleErrors": 0,
+    "operator": "main reviewer"
+  },
+  "limits": [
+    "SSR check isolates the child task form; main reviewer separately verified creation and deletion in IAB",
+    "Physical phone and live production service were not tested by these checks"
+  ]
+}
