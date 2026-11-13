@@ -6,6 +6,7 @@
 - 변경은 이 브라우저에만 저장되며 **데모 초기화**로 예시 24개를 복원
 - JSON 내려받기는 업무와 업무 색상만 포함
 - 로그인·계정 관리·실제 WBS 가져오기·서버 저장·문서 확정은 비활성
+- 과거 주간 집계는 보존 이력이 없는 공개 데모에서 숨김
 
 ## 웹 데모
 
@@ -56,3 +57,5 @@ npm run check
 ![가상 데이터 모바일 화면](assets/latest-month-mobile.jpg)
 
 ![가상 데이터 일간 화면](assets/latest-day-desktop.jpg)
+
+![가상 데이터 주간 화면과 체험 안내](assets/latest-week-desktop.jpg)

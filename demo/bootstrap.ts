@@ -4,9 +4,6 @@ import { createCategoryApi } from './category-api.mjs';
 import { fixture, companyId, projectId, project, tags } from './fixture';
 import { restoreMonthSeed } from './month-seed';
 const key=`wt-portfolio-demo-v4:${basePath}`;
-const demoMetrics={mockRequests:0,blockedRequests:0,cspViolations:0};
-const updateMetrics=()=>{const el=document.getElementById('demo-network-status');if(el)el.textContent=JSON.stringify(demoMetrics);};
-document.addEventListener('securitypolicyviolation',()=>{demoMetrics.cspViolations++;updateMetrics();});
 let handler: (route:any)=>Promise<any>;
 const {state}=await fixture({route:async(_pattern,fn)=>{handler=fn;}});
 let saved:unknown;try{saved=JSON.parse(localStorage.getItem(key)||'null');}catch{}
@@ -21,9 +18,8 @@ let importance:Record<string,any>=Object.fromEntries(state.entries.filter((_,i)=
 
 globalThis.fetch=async(input,init)=>{
  const u=new URL(input instanceof Request?input.url:String(input),location.href);
- if(u.origin!==location.origin){demoMetrics.blockedRequests++;updateMetrics();throw new Error('Portfolio demo blocks external requests');}
- if(!u.pathname.startsWith('/api/')){demoMetrics.blockedRequests++;updateMetrics();return new Response('Demo API only',{status:403});}
- demoMetrics.mockRequests++;updateMetrics();
+ if(u.origin!==location.origin){throw new Error('Portfolio demo blocks external requests');}
+ if(!u.pathname.startsWith('/api/')){return new Response('Demo API only',{status:403});}
  const requestedCompany=/^\/api\/companies\/([^/]+)(?:\/|$)/.exec(u.pathname)?.[1];
  if(requestedCompany&&requestedCompany!==companyId)return json({code:'NOT_FOUND'},404);
  const method=init?.method||(input instanceof Request?input.method:'GET');
@@ -49,7 +45,7 @@ const base=`/c/${companyId}`;
 let initialPath='/';try{initialPath=logicalPath();}catch{}
 if(initialPath==='/'||!allowedDemoPath(initialPath))history.replaceState(null,'',demoURL(`${base}/month?year=2026&month=2026-10&date=2026-10-01&projectId=${projectId}`));
 window.addEventListener('hashchange',()=>window.location.reload());
-const banner=document.createElement('aside');banner.className='demo-banner';banner.innerHTML='<strong>PORTFOLIO DEMO</strong><span>2026년 10월 가상 데이터 · 이 브라우저에만 저장 · 계정/서버 연결 없음</span><button type="button" id="demo-export">JSON 내려받기</button><button type="button" id="demo-reset">데모 초기화</button>';document.body.prepend(banner);const scope=document.createElement('details');scope.className='demo-scope';scope.innerHTML='<summary>체험 범위와 저장 방식</summary><p>월간·주간·일간 업무, 색상과 중요 표시를 가상 데이터로 체험합니다. 로그인·실제 WBS 가져오기·계정 관리·서버 저장은 연결하지 않았습니다. 예시 및 직접 입력한 내용은 이 브라우저에만 보관됩니다.</p><output id="demo-network-status" aria-label="데모 요청 상태"></output>';banner.after(scope);updateMetrics();
+const banner=document.createElement('aside');banner.className='demo-banner';banner.innerHTML='<strong>PORTFOLIO DEMO</strong><span>2026년 10월 가상 데이터 · 이 브라우저에만 저장 · 계정/서버 연결 없음</span><button type="button" id="demo-export">JSON 내려받기</button><button type="button" id="demo-reset">데모 초기화</button>';document.body.prepend(banner);const scope=document.createElement('details');scope.className='demo-scope';scope.innerHTML='<summary>체험 범위와 저장 방식</summary><p>가상 데이터로 월간·주간·일간 업무와 색상·중요 표시를 체험할 수 있습니다. 변경 내용은 이 브라우저에만 저장됩니다. 로그인·계정 관리·WBS 가져오기·서버 저장은 공개 데모에 포함하지 않습니다.</p>';banner.after(scope);
 banner.querySelector('#demo-reset')!.addEventListener('click',()=>{if(confirm('이 데모의 가상 업무를 초기화할까요?')){localStorage.removeItem(key);localStorage.removeItem(key+'-categories');localStorage.removeItem(key+'-importance');for(const k of Object.keys(sessionStorage)){if(k.includes(companyId)||k.includes('work-user-a'))sessionStorage.removeItem(k);}location.href=basePath;}});
 document.addEventListener('click',event=>{
  const a=(event.target as Element).closest('a');if(!a)return;
