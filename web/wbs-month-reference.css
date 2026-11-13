@@ -1,0 +1,47 @@
+.wbs-month-reference {
+  min-width: 0;
+  margin: 0.8rem 0;
+  padding: 0.8rem;
+  border: 1px solid #b8c7f1;
+  border-left: 4px solid #4263eb;
+  border-radius: 10px;
+  background: var(--surface);
+  overflow-wrap: anywhere;
+  font-size: 0.875rem;
+}
+.wbs-month-reference-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.wbs-month-reference h3,
+.wbs-month-reference h4 {
+  margin: 0.25rem 0 0.5rem;
+}
+.wbs-month-reference-heading button {
+  min-height: 44px;
+  margin: 0;
+  white-space: normal;
+}
+.wbs-month-reference-context,
+.wbs-month-reference li span {
+  color: var(--muted);
+}
+.wbs-month-reference ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.wbs-month-reference li {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--line);
+}
+.wbs-month-reference-uncertain {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--border);
+}

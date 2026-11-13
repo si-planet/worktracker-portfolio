@@ -1,0 +1,75 @@
+.month-schedule-dialog {
+  box-sizing: border-box;
+  width: min(1120px, calc(100vw - 32px));
+  max-height: calc(100dvh - 32px);
+  padding: 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--ink);
+  background: var(--surface);
+  overflow: auto;
+}
+.month-schedule-dialog::backdrop {
+  background: #18233366;
+}
+.month-schedule-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.month-schedule-heading h2 {
+  margin: 0;
+}
+.month-schedule-heading p {
+  margin: 0.3rem 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.month-schedule-modes {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.month-schedule-modes [aria-pressed='true'] {
+  background: var(--accent);
+  color: white;
+}
+.month-schedule-dialog .work-panel {
+  margin: 0;
+  min-width: 0;
+}
+.month-schedule-dialog .work-detail-body {
+  display: block;
+}
+.month-schedule-dialog .is-schedule-create > .work-heading,
+.month-schedule-dialog .is-schedule-create > .work-mode-bar,
+.month-schedule-dialog .is-schedule-create .work-query-tools {
+  display: none;
+}
+.month-create-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.7rem 0;
+}
+.month-create-actions span {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+@media (max-width: 600px) {
+  .month-schedule-dialog {
+    width: calc(100vw - 16px);
+    max-height: calc(100dvh - 16px);
+    padding: 0.75rem;
+  }
+  .month-schedule-heading button {
+    min-height: 36px;
+  }
+  .month-schedule-modes button {
+    min-width: 0;
+    flex: 1;
+  }
+}

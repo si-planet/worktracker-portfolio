@@ -1,0 +1,170 @@
+.leave-ledger {
+  color: #193050;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1rem;
+  overflow-wrap: anywhere;
+}
+.leave-ledger h1 {
+  margin: 0 0 0.5rem;
+}
+.leave-ledger h2,
+.leave-impact h3 {
+  scroll-margin-top: 80px;
+}
+.leave-ledger section,
+.leave-impact {
+  border-top: 1px solid #d8e3f3;
+  padding: 0.85rem 0;
+  margin-top: 0.7rem;
+}
+.leave-ledger fieldset {
+  border: 0;
+  padding: 0;
+  min-width: 0;
+  display: grid;
+  gap: 0.7rem;
+}
+.leave-ledger label,
+.leave-fields {
+  display: grid;
+  gap: 0.3rem;
+}
+.leave-fields {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+.leave-ledger label:has(input[type='checkbox']),
+.leave-confirmation label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.leave-ledger input,
+.leave-ledger select,
+.leave-ledger textarea {
+  min-width: 0;
+  width: 100%;
+  padding: 0.55rem;
+  border: 1px solid #b8cce8;
+  border-radius: 6px;
+  background: white;
+  color: inherit;
+  box-sizing: border-box;
+  font: inherit;
+}
+.leave-ledger textarea {
+  min-height: 5rem;
+}
+.leave-ledger input[type='checkbox'],
+.leave-confirmation input {
+  width: auto;
+  flex-shrink: 0;
+}
+.leave-ledger button,
+.leave-work-review button,
+.leave-entry-details button {
+  background: white;
+  color: #185db4;
+  border: 1px solid #a9c5e9;
+  border-radius: 6px;
+  padding: 0.55rem 0.7rem;
+  font: inherit;
+  min-height: 40px;
+  cursor: pointer;
+}
+.leave-ledger button:disabled,
+.leave-work-review button:disabled {
+  cursor: default;
+  opacity: 0.65;
+}
+.leave-ledger :focus-visible,
+.leave-work-review :focus-visible {
+  outline: 3px solid #1768e8;
+  outline-offset: 2px;
+}
+.leave-ledger summary,
+.leave-entry-details summary {
+  cursor: pointer;
+  padding: 0.45rem 0;
+  color: #185db4;
+}
+.leave-actions {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.65rem 0;
+}
+.leave-actions label {
+  flex: 1 1 160px;
+}
+.leave-ledger ul,
+.leave-impact ul {
+  list-style: none;
+  padding: 0;
+}
+.leave-ledger li,
+.leave-impact li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #e1e9f5;
+  display: grid;
+  gap: 0.3rem;
+}
+.leave-ledger li button {
+  text-align: left;
+  justify-self: start;
+  max-width: 100%;
+}
+.leave-ledger small,
+.leave-impact small {
+  color: #536985;
+}
+.leave-amounts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1.5rem;
+  margin: 0.7rem 0;
+}
+.leave-amounts div {
+  display: grid;
+  gap: 0.2rem;
+}
+.leave-amounts dd {
+  margin: 0;
+  font-weight: 650;
+}
+.leave-amounts dt {
+  color: #536985;
+  font-size: 0.9em;
+}
+.leave-recovery,
+.leave-confirmation {
+  border-left: 3px solid #1768e8;
+  background: #edf5ff;
+  padding: 0.7rem;
+  margin: 0.6rem 0;
+  overflow-wrap: anywhere;
+}
+.leave-recovery button + button {
+  margin-left: 0.5rem;
+}
+.leave-work-review,
+.leave-entry-details {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 600px) {
+  .leave-ledger {
+    padding: 0.65rem;
+  }
+  .leave-fields {
+    grid-template-columns: 1fr;
+  }
+  .leave-recovery button {
+    margin: 0.25rem 0;
+  }
+  .leave-recovery button + button {
+    margin-left: 0;
+  }
+}

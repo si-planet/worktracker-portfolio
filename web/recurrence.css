@@ -1,0 +1,134 @@
+.recurrence-page,
+.recurrence-editor,
+.recurrence-preview {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.recurrence-hint,
+.recurrence-rules span {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.recurrence-support {
+  margin: 0.6rem 0;
+}
+.recurrence-support summary {
+  min-height: 44px;
+  padding: 0.5rem 0;
+  color: var(--accent-ink);
+  cursor: pointer;
+}
+.recurrence-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.recurrence-rules,
+.recurrence-preview ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.65rem 0;
+}
+.recurrence-rules li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--line);
+  padding: 0.4rem 0;
+}
+.recurrence-editor {
+  border-top: 1px solid var(--line);
+  margin-top: 0.8rem;
+  padding-top: 0.5rem;
+}
+.recurrence-editor h2,
+.recurrence-preview h3 {
+  scroll-margin-top: 5rem;
+}
+.recurrence-editor fieldset {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.65rem;
+  margin: 0.65rem 0;
+}
+.recurrence-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem 0.75rem;
+}
+.recurrence-fields label {
+  display: grid;
+  gap: 0.3rem;
+  min-width: 0;
+}
+.recurrence-wide {
+  grid-column: 1/-1;
+}
+.recurrence-fields input,
+.recurrence-fields textarea,
+.recurrence-fields select {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  font: inherit;
+}
+.recurrence-fields textarea {
+  min-height: 6rem;
+  white-space: pre-wrap;
+}
+.recurrence-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0.3rem 0.6rem 0.3rem 0;
+}
+.recurrence-check input {
+  width: 1rem;
+  height: 1rem;
+}
+.recurrence-page button {
+  min-height: 44px;
+  max-width: 100%;
+  margin: 0.2rem;
+  font-size: 0.875rem;
+}
+.recurrence-preview li {
+  border-bottom: 1px solid var(--line);
+  padding: 0.6rem 0;
+}
+.recurrence-recovery {
+  background: var(--surface-muted);
+  padding: 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.recurrence-summary {
+  font-weight: 600;
+  margin: 0.65rem 0;
+}
+.recurrence-monthly-decisions {
+  padding: 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-muted);
+}
+.recurrence-monthly-decisions h4 {
+  margin: 0 0 0.4rem;
+}
+.recurrence-page [hidden] {
+  display: none;
+}
+@media (max-width: 540px) {
+  .recurrence-fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .recurrence-editor fieldset {
+    padding: 0.5rem;
+  }
+}

@@ -1,0 +1,31 @@
+.work-source-badges {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  min-width: 0;
+  max-width: 100%;
+  vertical-align: middle;
+}
+.work-source-badge {
+  display: inline-block;
+  min-width: 0;
+  max-width: 100%;
+  padding: 1px 5px;
+  border: 1px dashed var(--line);
+  border-radius: 4px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+.work-source-notice {
+  color: var(--muted);
+  font-size: 12px;
+}
+@media (forced-colors: active) {
+  .work-source-badge {
+    border-color: CanvasText;
+    color: CanvasText;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "filesChecked": 244,
+  "sourceFiles": 208,
+  "deployedAssets": 8,
+  "modifiedSourceFiles": [
+    "web/category-color-control.tsx",
+    "web/work-color-picker.tsx"
+  ],
+  "findings": [],
+  "passed": true,
+  "scope": "Source and deployed-asset hashes plus heuristic scan; not proof of every possible confidential value or production behavior."
+}

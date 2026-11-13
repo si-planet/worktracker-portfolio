@@ -1,0 +1,69 @@
+{
+  "routing": "hash",
+  "basePath": "document-relative",
+  "output": "docs",
+  "sourceTransforms": [
+    "web/account-settings.tsx",
+    "web/account-transfer.tsx",
+    "web/auth.tsx",
+    "web/email-change.tsx",
+    "web/export-api.ts",
+    "web/export.tsx",
+    "web/leave-ledger.tsx",
+    "web/main.tsx",
+    "web/month-view.tsx",
+    "web/notes-api.ts",
+    "web/notes-feed.tsx",
+    "web/password-recovery.tsx",
+    "web/period-document.tsx",
+    "web/pwa-runtime.ts",
+    "web/recurrence-api.ts",
+    "web/recurrence.tsx",
+    "web/search-view.tsx",
+    "web/wbs-excel-import.tsx",
+    "web/wbs-work-links.tsx",
+    "web/wbs.tsx",
+    "web/weekly-goals.tsx",
+    "web/weekly-work-list.tsx",
+    "web/work-entries.tsx",
+    "web/worklog-import.tsx",
+    "web/worklog-source-review.tsx",
+    "web/workspace-shell.tsx",
+    "web/workspace.tsx"
+  ],
+  "sourceMaps": false,
+  "assets": [
+    {
+      "file": ".nojekyll",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "index.html",
+      "sha256": "d0604fc2d0aabd0fb20396084dd10f0a1f9759f70cd2a4f5ca2bde6c7caa49ca"
+    },
+    {
+      "file": "app.js",
+      "sha256": "fe775f0b14fc94f9b3d08511c2d0acc7bdddc0894c78a5aa076f00179ccee2bc"
+    },
+    {
+      "file": "app.css",
+      "sha256": "b4476cf35cfe8179ca860ece49720612b63f8df4067bdbea9e09f8b69e39d98e"
+    },
+    {
+      "file": "demo/banner.css",
+      "sha256": "795b9dbc8ee981f36006e313dd8906a9b89d859c5c6fb29f27f459858bdbc139"
+    },
+    {
+      "file": "icons/work-tracker-192.svg",
+      "sha256": "d81f72e8760833a74eacf33376f5960b62877126a1a4970a1a543bd31f86a5fa"
+    },
+    {
+      "file": "icons/work-tracker-512.svg",
+      "sha256": "70a9edd9f901f029a9f01654506afd39482c3c9660cda1cc46567fde6856c1b7"
+    },
+    {
+      "file": "icons/work-tracker-maskable.svg",
+      "sha256": "f0d3b2b481782439126548885e1ad19c1ed2910588d734fe8be128441fb3a61d"
+    }
+  ]
+}

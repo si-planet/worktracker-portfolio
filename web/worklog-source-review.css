@@ -1,0 +1,55 @@
+.worklog-source-review {
+  min-width: 0;
+  padding-block: 1rem;
+  border-block: 1px solid var(--border, #d6dce3);
+}
+.worklog-source-review :is(p, h3, h4, code, summary, option) {
+  overflow-wrap: anywhere;
+}
+.worklog-source-controls {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.worklog-source-controls label {
+  min-width: 0;
+  max-width: 100%;
+}
+.worklog-source-controls select {
+  max-width: 100%;
+}
+.worklog-source-runs,
+.worklog-source-items {
+  padding-inline-start: 1.25rem;
+}
+.worklog-source-runs > li,
+.worklog-source-items > li {
+  margin-block: 1rem;
+  min-width: 0;
+}
+.worklog-source-review details {
+  margin-block: 0.5rem;
+  min-width: 0;
+}
+.worklog-source-review summary {
+  cursor: pointer;
+}
+.worklog-source-value {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.worklog-source-meta {
+  font-size: 0.85em;
+}
+.worklog-source-review pre {
+  max-height: 24rem;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  background: var(--surface-subtle, #f4f6f8);
+  border: 1px solid var(--border, #d6dce3);
+  border-radius: 0.4rem;
+}

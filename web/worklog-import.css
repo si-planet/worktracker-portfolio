@@ -1,0 +1,4 @@
+.worklog-import {
+  /* Package hashes and source IDs must not widen the mobile layout viewport. */
+  overflow-wrap: anywhere;
+}

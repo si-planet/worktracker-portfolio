@@ -1,0 +1,329 @@
+.wbs-page {
+  overflow-wrap: anywhere;
+}
+.wbs-page .wbs-controls,
+.wbs-page .wbs-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 0.65rem;
+  margin: 0.8rem 0;
+}
+.wbs-page label {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0.65rem 0;
+  min-width: 0;
+}
+.wbs-page input,
+.wbs-page textarea,
+.wbs-page select {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+}
+.wbs-page input[type='date'] {
+  width: 12rem;
+  max-width: 100%;
+}
+.wbs-page textarea {
+  width: 100%;
+  min-height: 6rem;
+  white-space: pre-wrap;
+}
+.wbs-page fieldset {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem;
+}
+.wbs-page button {
+  min-height: 44px;
+  margin: 0.25rem;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.wbs-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+.wbs-list > li,
+.wbs-editor,
+.wbs-delete,
+.wbs-history {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  margin: 1rem 0;
+}
+.wbs-dates {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+.wbs-dates > div {
+  border-left: 3px solid var(--accent);
+  padding: 0.65rem;
+  background: var(--accent-soft);
+}
+.wbs-text {
+  white-space: pre-wrap;
+}
+.wbs-field-help {
+  margin: 0.35rem 0 0.75rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+.wbs-input-guide,
+.wbs-optional {
+  margin: 0.75rem 0;
+}
+.wbs-input-guide summary,
+.wbs-optional summary {
+  min-height: 44px;
+  align-content: center;
+  cursor: pointer;
+}
+.wbs-input-guide dl {
+  display: grid;
+  grid-template-columns: minmax(0, 10rem) minmax(0, 1fr);
+  gap: 0.5rem 1rem;
+  margin: 0.5rem 0;
+}
+.wbs-input-guide dt {
+  font-weight: 600;
+}
+.wbs-input-guide dd {
+  margin: 0;
+}
+.wbs-check {
+  display: flex !important;
+  align-items: center;
+  gap: 0.5rem;
+}
+.wbs-check input {
+  width: auto;
+}
+.wbs-dialog {
+  border: 2px solid var(--accent);
+  padding: 1rem;
+  border-radius: 12px;
+  background: var(--surface);
+  margin: 1rem 0;
+}
+@media (max-width: 600px) {
+  .wbs-dates {
+    grid-template-columns: 1fr;
+  }
+  .wbs-controls > * {
+    width: 100%;
+  }
+  .wbs-page fieldset {
+    padding: 0.65rem;
+  }
+  .wbs-input-guide dl {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.25rem;
+  }
+  .wbs-input-guide dd {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.wbs-dialog {
+  max-width: min(36rem, calc(100vw - 2rem));
+  max-height: 85vh;
+  overflow-y: auto;
+  margin: auto;
+}
+.wbs-dialog::backdrop {
+  background: rgb(15 23 42 / 0.4);
+}
+
+.wbs-page input:not([type='checkbox']),
+.wbs-page select,
+.wbs-page textarea {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+  background: var(--surface);
+  color: var(--ink);
+  min-height: 44px;
+}
+.wbs-page input:not([type='checkbox']) {
+  width: 100%;
+}
+.wbs-page input[type='date'] {
+  width: 12rem;
+}
+.wbs-page button[type='submit'] {
+  background: var(--accent);
+  color: white;
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  padding: 0.65rem 1rem;
+}
+
+.wbs-page button[type='submit']:disabled {
+  background: #f0f3f8;
+  color: #64748b;
+  border-color: var(--line);
+}
+
+.work-link-dialog {
+  width: min(38rem, calc(100vw - 2rem));
+  max-height: 85vh;
+  margin: auto;
+  padding: 1rem;
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--ink);
+  overflow-y: auto;
+  overflow-wrap: anywhere;
+}
+.work-link-dialog::backdrop {
+  background: rgb(15 23 42 / 0.4);
+}
+.work-link-dialog dl {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.4rem;
+}
+.work-link-dialog dd {
+  margin: 0 0 0.65rem;
+  white-space: pre-wrap;
+}
+.work-link-dialog button {
+  min-height: 44px;
+  margin: 0.25rem;
+  white-space: normal;
+}
+.work-link-dialog .primary {
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  padding: 0.65rem 1rem;
+  background: var(--accent);
+  color: white;
+}
+.work-link-dialog .primary:disabled {
+  background: #f0f3f8;
+  border-color: var(--line);
+  color: #64748b;
+}
+.wbs-work-links {
+  margin: 0.75rem 0;
+  padding: 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  overflow-wrap: anywhere;
+}
+.wbs-work-links ul {
+  list-style: none;
+  padding: 0;
+}
+.wbs-work-links li {
+  padding: 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  margin: 0.5rem 0;
+}
+.wbs-work-links label {
+  display: grid;
+  gap: 0.35rem;
+}
+.wbs-work-links button,
+.wbs-work-links a {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.wbs-completion {
+  margin: 0.75rem 0;
+  padding: 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.wbs-completion-dialog {
+  width: min(38rem, calc(100vw - 2rem));
+  max-height: 85vh;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 1rem;
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--ink);
+  overflow: auto;
+  overflow-wrap: anywhere;
+}
+.wbs-completion-dialog::backdrop {
+  background: rgb(15 23 42 / 0.4);
+}
+.wbs-completion-dialog button {
+  min-height: 44px;
+  margin: 0.25rem;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.wbs-completion-dialog .primary {
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  padding: 0.65rem 1rem;
+  background: var(--accent);
+  color: white;
+}
+.wbs-completion-dialog .primary:disabled {
+  background: #f0f3f8;
+  border-color: var(--line);
+  color: #64748b;
+}
+
+.wbs-excel-import {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel, #fff);
+}
+.wbs-excel-import summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+.wbs-excel-import table {
+  min-width: 720px;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9rem;
+}
+.wbs-excel-import th,
+.wbs-excel-import td {
+  padding: 0.6rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+.wbs-excel-import td:nth-child(2) {
+  min-width: 160px;
+}
+.wbs-excel-import td:nth-child(3) {
+  min-width: 220px;
+}
+.wbs-excel-import th {
+  white-space: nowrap;
+}
+.wbs-excel-import td:nth-last-child(-n + 2) {
+  white-space: nowrap;
+}
+.wbs-excel-import input[type='checkbox'] {
+  width: auto;
+}

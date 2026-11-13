@@ -1,0 +1,24 @@
+{
+  "name": "worktracker-portfolio-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "python3 scripts/serve.py --directory docs",
+    "test": "node scripts/test-adapters.mjs && python3 scripts/test-hosting.py",
+    "audit": "python3 scripts/audit.py",
+    "check": "npm test && npm run audit"
+  },
+  "dependencies": {
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.1"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

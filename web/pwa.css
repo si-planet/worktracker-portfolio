@@ -1,0 +1,105 @@
+.pwa-content {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.pwa-content:disabled {
+  opacity: 1;
+}
+.pwa-content:disabled button {
+  cursor: not-allowed;
+}
+.pwa-banner,
+.pwa-update,
+.pwa-install,
+.pwa-confirm,
+.pwa-help {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  overflow-wrap: anywhere;
+}
+.pwa-banner {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--accent-soft);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  align-items: center;
+}
+.pwa-update {
+  background: var(--accent-soft);
+  border-bottom: 1px solid var(--border);
+}
+.pwa-update p {
+  margin: 0.6rem 0;
+}
+.pwa-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+.pwa-confirm {
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  margin-top: 1rem;
+  background: #fff;
+}
+.pwa-offline {
+  margin: 12vh auto;
+  max-width: 600px;
+  padding: 1.5rem;
+  line-height: 1.7;
+}
+.pwa-install {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+}
+.pwa-install > button {
+  flex: 0 0 auto;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.8rem;
+}
+.pwa-install-guide {
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.pwa-install-guide > summary {
+  box-sizing: border-box;
+  min-width: 44px;
+  min-height: 44px;
+  width: fit-content;
+  padding: 0.75rem 0;
+  cursor: pointer;
+}
+.pwa-install-guide > p {
+  max-width: 30rem;
+  margin: 0 0 0.5rem;
+  line-height: 1.5;
+}
+@media (max-width: 600px) {
+  .pwa-banner,
+  .pwa-update,
+  .pwa-confirm,
+  .pwa-help {
+    padding: 1rem;
+  }
+  .pwa-install {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  .pwa-actions > button {
+    flex: 1 1 auto;
+  }
+}

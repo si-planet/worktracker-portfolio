@@ -1,0 +1,129 @@
+.work-color-picker {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  margin: 12px 0;
+  padding: 14px;
+  min-width: 0;
+  background: #fff;
+}
+.work-color-picker legend {
+  padding: 0 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.work-color-preview {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 9px;
+  background: var(--month-work-background);
+  color: #172333;
+  min-width: 0;
+}
+.work-color-preview > span {
+  flex: 0 0 5px;
+  height: 23px;
+  border-radius: 3px;
+  background: var(--month-work-color);
+}
+.work-color-preview strong {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 0.85rem;
+}
+.work-color-preview small {
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
+.work-color-options {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.work-color-option,
+.work-color-default {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+  color: #172333;
+}
+.work-color-default {
+  width: auto;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+}
+.work-color-option > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  background: var(--color-swatch);
+}
+.work-color-option b {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #172333;
+  color: #fff;
+  font-size: 11px;
+  line-height: 17px;
+}
+.work-color-picker [aria-pressed='true'] {
+  border: 2px solid #172333;
+}
+.work-color-picker button:focus-visible,
+.work-color-picker input:focus-visible,
+.work-color-control summary:focus-visible {
+  outline: 3px solid #1767b8;
+  outline-offset: 3px;
+}
+.work-color-custom {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0 0;
+  font-size: 0.8rem;
+}
+.work-color-custom input {
+  width: 44px;
+  min-height: 36px;
+  padding: 3px;
+}
+.work-color-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.work-color-control {
+  margin-top: 8px;
+}
+.work-color-control summary {
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: var(--muted);
+  padding: 5px 0;
+}
+@media (forced-colors: active) {
+  .work-color-option,
+  .work-color-default {
+    border: 1px solid ButtonText;
+  }
+  .work-color-picker [aria-pressed='true'] {
+    outline: 2px solid Highlight;
+  }
+  .work-color-preview > span {
+    border: 2px solid CanvasText;
+  }
+}

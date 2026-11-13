@@ -1,0 +1,161 @@
+.goals-page {
+  overflow-wrap: anywhere;
+}
+.goals-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+.goals-grid > *,
+.goal-editor,
+.goal-placement {
+  min-width: 0;
+}
+.goal-card {
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+}
+.goal-card h3 {
+  margin-top: 0;
+}
+.goal-note {
+  white-space: pre-wrap;
+}
+.goal-editor,
+.goal-placement,
+.goal-picker {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface-muted);
+}
+.goals-page form,
+.goal-placement fieldset {
+  display: grid;
+  gap: 0.85rem;
+}
+.goals-page .work-list {
+  padding: 0;
+  list-style: none;
+}
+.goal-receipts {
+  padding-left: 1.2rem;
+}
+.goal-picker ul {
+  max-height: 24rem;
+  overflow: auto;
+  padding-left: 1.2rem;
+}
+.goal-picker li {
+  margin: 0.7rem 0;
+}
+.goal-picker button {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 700px) {
+  .goals-grid {
+    grid-template-columns: 1fr;
+  }
+  .goal-editor,
+  .goal-placement,
+  .goal-picker {
+    padding: 0.75rem;
+  }
+}
+
+.goals-page {
+  border-top: 0;
+  padding-top: 0;
+}
+.goals-grid {
+  gap: 20px;
+  margin-top: 24px;
+}
+.goal-editor {
+  margin-top: 0;
+}
+.goal-card {
+  box-shadow: 0 2px 6px #18233304;
+}
+.goal-editor,
+.goal-placement,
+.goal-picker {
+  border-radius: 16px;
+}
+.goal-placement {
+  background: var(--surface);
+  padding: 22px;
+}
+.goal-placement > button,
+.goal-placement > a {
+  margin: 4px 6px 4px 0;
+}
+.goal-editor form button[type='submit'],
+.goal-placement form button[type='submit'] {
+  min-height: 48px;
+}
+.goal-card h3 {
+  font-size: 18px;
+  line-height: 1.5;
+}
+@media (max-width: 700px) {
+  .goal-placement {
+    padding: 16px;
+  }
+}
+
+.goal-receipts button {
+  display: block;
+  margin-top: 8px;
+}
+
+.wbs-goal-import {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface-muted);
+  overflow-wrap: anywhere;
+}
+.wbs-goal-import label {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0.75rem 0;
+}
+.wbs-goal-import input {
+  min-height: 44px;
+  min-width: 0;
+  max-width: 100%;
+}
+.wbs-goal-import button,
+.wbs-goal-import a {
+  margin: 0.25rem;
+}
+.goal-import-dialog {
+  width: min(36rem, calc(100vw - 2rem));
+  max-height: calc(100dvh - 2rem);
+  overflow: auto;
+  overflow-wrap: anywhere;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: white;
+  color: var(--ink);
+}
+.goal-import-dialog::backdrop {
+  background: #18233366;
+}
+.goal-import-dialog button {
+  min-height: 44px;
+  margin: 0.25rem;
+  max-width: 100%;
+}
+.goal-import-dialog .primary {
+  background: var(--accent);
+  color: white;
+}

@@ -1,0 +1,275 @@
+.wbs-planner-entry {
+  margin: 0.75rem 0;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+}
+.wbs-planner-entry > summary {
+  min-height: 44px;
+  padding: 0.65rem 0.8rem;
+  color: var(--accent-ink);
+  font-weight: 600;
+  cursor: pointer;
+}
+.wbs-planner {
+  container: annual-calendar / inline-size;
+  min-width: 0;
+  padding: 0 0.8rem 0.8rem;
+  font-size: 0.875rem;
+}
+.wbs-planner .wbs-planner-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.7rem;
+}
+.wbs-planner .wbs-planner-toolbar label {
+  margin: 0.35rem 0;
+}
+.wbs-planner .wbs-planner-check {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.wbs-planner .wbs-planner-check input {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+.wbs-planner .wbs-planner-toolbar button {
+  margin: 0;
+  padding: 0.4rem 0.6rem;
+}
+.wbs-planner-caption {
+  color: var(--muted);
+  font-size: 0.75rem;
+  overflow-wrap: anywhere;
+}
+.wbs-planner-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.9rem;
+  padding: 0;
+  list-style: none;
+}
+.wbs-planner-legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.wbs-planner-swatch {
+  flex: none;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 2px;
+  background: var(--planner-project);
+}
+.wbs-planner-months {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.8rem;
+  align-items: stretch;
+}
+.wbs-planner-month {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.55rem;
+  background: var(--surface);
+}
+.wbs-planner-month h3 {
+  margin: 0 0 0.4rem;
+  min-height: 28px;
+  align-content: center;
+  font-size: 0.95rem;
+  scroll-margin-top: 1rem;
+}
+.wbs-planner-weekdays,
+.wbs-planner-days,
+.wbs-planner-tracks {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+.wbs-planner-weekdays,
+.wbs-planner-days {
+  color: var(--muted);
+  font-size: 0.75rem;
+  text-align: center;
+}
+.wbs-planner-weekdays span {
+  min-height: 24px;
+  align-content: center;
+}
+.wbs-planner-weeks {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.wbs-planner-week {
+  flex: 1;
+  min-width: 0;
+  border-top: 1px solid var(--line);
+  padding-bottom: 3px;
+}
+.wbs-planner-tracks {
+  min-height: 10px;
+  gap: 2px 0;
+}
+.wbs-planner-lane {
+  min-width: 0;
+}
+.wbs-planner-day-empty {
+  opacity: 0;
+}
+.wbs-planner [data-weekend='true'] {
+  color: #a44b5a;
+}
+@container annual-calendar (min-width: 601px) {
+  .wbs-planner-months {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@container annual-calendar (min-width: 1051px) {
+  .wbs-planner-months {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.wbs-planner .wbs-planner-bar {
+  min-width: 0;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  height: 28px;
+  margin: 0;
+  padding: 2px 4px;
+  border: 1px solid var(--planner-project);
+  border-left-width: 4px;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  text-align: left;
+  line-height: 1.4;
+  color: var(--ink);
+}
+.wbs-planner-bar span {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.wbs-planner .wbs-planner-plan {
+  background: var(--surface);
+}
+.wbs-planner .wbs-planner-actual {
+  background: var(--accent-soft);
+  border-style: dashed;
+  border-left-style: solid;
+}
+.wbs-planner-no-bars {
+  min-height: 28px;
+  margin: 0;
+  padding: 3px 6px;
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+.wbs-planner-index {
+  margin-top: 0.8rem;
+}
+.wbs-planner-index summary {
+  min-height: 44px;
+  align-content: center;
+  cursor: pointer;
+}
+.wbs-planner-index ul {
+  list-style: none;
+  padding: 0;
+}
+.wbs-planner-index li {
+  display: grid;
+  gap: 0.2rem;
+  border-left: 3px solid var(--planner-project);
+  padding: 0.35rem 0.6rem;
+  margin-bottom: 0.5rem;
+}
+.wbs-planner-index li button {
+  justify-self: start;
+  text-align: left;
+  margin: 0;
+}
+.wbs-planner-index li > span {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+.wbs-planner-detail {
+  scroll-margin-top: 4.5rem;
+  min-width: 0;
+  margin-top: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem;
+  background: var(--surface-muted);
+}
+.wbs-planner-detail h3 {
+  margin-top: 0;
+}
+.wbs-planner-detail dl {
+  display: grid;
+  grid-template-columns: minmax(0, 10rem) minmax(0, 1fr);
+  gap: 0.35rem 0.75rem;
+}
+.wbs-planner-detail dt {
+  font-weight: 600;
+}
+.wbs-planner-detail dd {
+  margin: 0;
+}
+.wbs-planner-text {
+  white-space: pre-wrap;
+}
+@media (max-width: 600px) {
+  .wbs-planner {
+    padding: 0 0.5rem 0.5rem;
+  }
+  .wbs-planner-detail dl {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.2rem;
+  }
+  .wbs-planner-detail dd {
+    margin-bottom: 0.4rem;
+  }
+}
+
+.wbs-planner-days span {
+  min-height: 28px;
+  align-content: center;
+}
+.wbs-planner-days span[data-move-date] {
+  border-bottom: 1px dashed var(--line);
+}
+.wbs-planner-plan[draggable='true'] {
+  cursor: grab;
+}
+.wbs-planner-index li,
+.wbs-planner-detail {
+  overflow-wrap: anywhere;
+}
+.wbs-planner-index li button {
+  max-width: 100%;
+  white-space: normal;
+}
+
+.wbs-planner .wbs-planner-baseline {
+  background: var(--surface);
+  border-color: #4263eb;
+  border-left-width: 5px;
+}
+.wbs-planner .wbs-planner-personal {
+  display: block;
+  box-sizing: border-box;
+  text-decoration: none;
+  background: var(--surface);
+  border: 1px solid #13866c;
+  border-left-width: 5px;
+}

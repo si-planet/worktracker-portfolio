@@ -1,0 +1,221 @@
+.real-worklog-review {
+  min-width: 0;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+.real-review-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+.real-review-kicker {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--muted);
+  font-size: 0.73rem;
+  font-weight: 600;
+}
+.real-review-readonly {
+  flex-shrink: 0;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid #d4dfef;
+  border-radius: 6px;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-size: 0.73rem;
+  font-weight: 600;
+}
+.real-review-header h1 {
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.2rem, 3vw, 1.65rem);
+}
+.real-review-header p,
+.real-review-context,
+.real-review-muted {
+  margin: 0.4rem 0;
+  font-size: 0.8rem;
+}
+.real-review-context {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.75rem;
+  padding: 0.6rem 0;
+}
+.real-review-context > span {
+  color: var(--muted);
+  font-size: 0.73rem;
+}
+.real-review-counts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin: 0.35rem 0 1rem;
+}
+.real-review-counts > div {
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+.real-review-counts dt {
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+.real-review-counts dd {
+  margin: 0.2rem 0 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+.real-review-counts small {
+  margin-left: 0.3rem;
+  font-size: 0.65rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+.real-review-source-context {
+  margin-top: 1.5rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.74rem;
+}
+.real-review-source-context > summary {
+  min-height: 30px;
+  cursor: pointer;
+}
+.real-review-main-toolbar {
+  justify-content: space-between;
+}
+.real-review-main-toolbar .real-review-switch {
+  margin: 0.2rem 0;
+}
+.real-review-muted {
+  color: var(--muted);
+}
+.real-review-toolbar,
+.real-review-switch {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.65rem 0;
+}
+.real-review-toolbar h2 {
+  margin: 0;
+  margin-right: auto;
+  font-size: 1rem;
+}
+.real-worklog-review button:not(.refresh-control) {
+  min-height: 36px;
+  padding: 0.4rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--surface);
+  color: var(--accent-ink);
+  font-size: 0.8rem;
+}
+.real-worklog-review button[aria-pressed='true'] {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+.real-worklog-review button:disabled {
+  color: var(--muted);
+  background: var(--surface-muted);
+}
+.real-review-table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+.real-review-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 0.76rem;
+}
+.real-review-table caption {
+  text-align: left;
+  padding: 0.45rem 0.65rem;
+  color: var(--muted);
+  background: var(--surface-muted);
+}
+.real-review-table th,
+.real-review-table td {
+  padding: 0.45rem 0.55rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+.real-review-table th {
+  background: var(--accent-soft);
+  font-weight: 600;
+}
+.real-review-table th:nth-child(2) {
+  width: 27%;
+}
+.real-review-table th:nth-child(3) {
+  width: 22%;
+}
+.real-review-table th:nth-child(4) {
+  width: 14%;
+}
+.real-review-table td > span,
+.real-review-table td > strong {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+.real-review-text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.real-review-review {
+  color: var(--accent-ink);
+  font-size: 0.72rem;
+}
+.real-review-provenance summary,
+.real-review-unresolved > summary {
+  cursor: pointer;
+  min-height: 32px;
+  color: var(--accent-ink);
+}
+.real-review-provenance dl {
+  margin: 0.4rem 0;
+}
+.real-review-provenance dt {
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+.real-review-provenance dd {
+  margin: 0.15rem 0 0;
+}
+.real-review-day h3 {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+.real-review-unresolved {
+  margin-top: 0.85rem;
+}
+@media (max-width: 540px) {
+  .real-review-header {
+    gap: 0.5rem;
+  }
+  .real-review-counts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .real-worklog-review button:not(.refresh-control) {
+    min-height: 40px;
+  }
+  .real-review-toolbar {
+    gap: 0.3rem;
+  }
+  .real-review-header h1 {
+    font-size: 1.15rem;
+  }
+}

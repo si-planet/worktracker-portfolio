@@ -1,0 +1,47 @@
+.work-item-dialog {
+  width: min(640px, calc(100vw - 24px));
+  max-height: calc(100dvh - 32px);
+  box-sizing: border-box;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px;
+  margin: auto;
+  color: var(--text);
+  background: var(--surface, white);
+}
+.work-item-dialog::backdrop {
+  background: #15243b70;
+}
+.work-dialog-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.work-item-dialog .work-editor {
+  margin-top: 12px;
+}
+.work-layout.is-day.is-reviewing .work-edit-primary,
+.work-layout.is-day .is-day-actions > .work-edit-action {
+  display: inline-flex !important;
+}
+.work-layout.is-day .is-day-actions {
+  flex-wrap: wrap !important;
+  overflow: visible !important;
+}
+.work-layout.is-day .is-day-actions > button[hidden] {
+  display: none !important;
+}
+.work-card-deadline {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+@media (max-width: 600px) {
+  .work-item-dialog {
+    padding: 14px;
+  }
+}
+.work-layout.is-day.is-reviewing .work-card > .work-edit-action {
+  display: block !important;
+}

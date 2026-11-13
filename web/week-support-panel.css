@@ -1,0 +1,51 @@
+.week-support-panel {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  overflow-wrap: anywhere;
+}
+.week-support-heading {
+  margin: 0;
+  padding: 0.65rem;
+}
+.week-support-heading button {
+  width: 100%;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.week-support-heading button:disabled {
+  opacity: 1;
+  color: var(--ink);
+  cursor: default;
+}
+.week-support-body {
+  min-width: 0;
+  padding: 0 0.65rem 0.65rem;
+}
+.week-support-body[hidden] {
+  display: none !important;
+}
+.week-support-notice {
+  margin: 0;
+  padding: 0 0.65rem 0.65rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.week-support-body > section {
+  margin: 0.25rem 0;
+  padding: 0.65rem;
+}
+.week-support-body input,
+.week-support-body select,
+.week-support-body textarea {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.week-support-body button,
+.week-support-body a {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}

@@ -1,0 +1,371 @@
+/* Weekly hub and detail pages share the existing blue/white palette. */
+.work-layout {
+  margin-top: 1.5rem;
+  min-width: 0;
+}
+.work-mode-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 1rem 0 1.5rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+}
+.work-mode-bar p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.work-mode-switch {
+  display: flex;
+  padding: 4px;
+  gap: 4px;
+  border-radius: 10px;
+  background: var(--surface-muted);
+}
+.work-mode-switch button {
+  min-height: 36px;
+  padding: 0.45rem 0.9rem;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--muted);
+}
+.work-mode-switch button[aria-pressed='true'] {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 2px 6px #1768e826;
+}
+.work-layout [hidden] {
+  display: none !important;
+}
+.work-layout.is-reviewing .work-edit-action {
+  display: none !important;
+}
+.work-layout .work-query-tools {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.work-query-tools summary {
+  cursor: pointer;
+  font-weight: 650;
+  color: var(--muted);
+}
+.work-query-tools[open] summary {
+  margin-bottom: 1rem;
+}
+.work-query-tools > a {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.work-day-main {
+  min-width: 0;
+}
+.work-layout.is-day .work-detail-body {
+  display: grid;
+  grid-template-columns: minmax(0, 2.3fr) minmax(280px, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+.work-day-notes {
+  min-width: 0;
+  background: var(--surface);
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+.work-day-notes h3 {
+  margin-top: 0;
+}
+.work-layout .work-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+}
+.work-layout .work-card {
+  min-width: 0;
+  box-shadow: none;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  padding: 1.1rem;
+}
+.work-layout .work-card h4 {
+  margin: 0.6rem 0;
+  font-size: 1.05rem;
+}
+.work-layout .work-card .work-actions {
+  gap: 0.4rem;
+}
+.work-layout .work-card .work-actions button {
+  min-height: 34px;
+  padding: 0.4rem 0.65rem;
+  font-size: 0.8rem;
+  border-color: var(--line);
+  background: var(--surface-muted);
+}
+.work-navigation-confirm {
+  position: fixed;
+  z-index: 100;
+  margin: auto;
+  width: min(480px, calc(100vw - 32px));
+  box-sizing: border-box;
+  background: white;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 20px 80px #18233333;
+}
+.work-navigation-confirm h3 {
+  margin-top: 0;
+}
+.work-layout .work-editor {
+  margin-top: 1.5rem;
+}
+@media (max-width: 900px) {
+  .work-layout.is-day .work-detail-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .work-mode-bar {
+    align-items: flex-start;
+  }
+}
+
+.work-navigation-confirm::backdrop {
+  background: #18233366;
+}
+
+/* Override the older generic work-panel button rule without changing other screens. */
+.work-panel.work-layout .work-mode-switch button {
+  border: 0;
+  background: transparent;
+  min-height: 36px;
+  color: var(--muted);
+}
+.work-panel.work-layout .work-mode-switch button[aria-pressed='true'] {
+  background: var(--accent);
+  color: #fff;
+}
+.work-panel.work-layout .week-overview-card {
+  background: linear-gradient(135deg, #f5f9ff, #eaf2ff);
+  border-color: #cfdef6;
+}
+.work-layout {
+  border-top: 0;
+  padding-top: 0.5rem;
+  margin-top: 0.75rem;
+}
+.work-layout .work-mode-bar {
+  margin: 0.65rem 0 1rem;
+}
+
+/* Keep the selected hub/day context when toggling editing; use dense tools. */
+.workspace-context-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+.work-layout {
+  margin-top: 4px;
+  padding-top: 0;
+}
+.work-layout .work-heading {
+  gap: 8px;
+  margin: 4px 0;
+}
+.work-layout .work-heading h2 {
+  font-size: 16px;
+  margin: 0;
+}
+.work-layout .work-heading > a {
+  font-size: 11px;
+}
+.work-layout .work-mode-bar {
+  gap: 6px;
+  margin: 7px 0;
+  padding: 4px 6px;
+  border-radius: 6px;
+}
+.work-layout .work-mode-bar p {
+  font-size: 11px;
+}
+.work-layout .work-mode-switch {
+  padding: 2px;
+  gap: 2px;
+  border-radius: 5px;
+}
+.work-panel.work-layout .work-mode-switch button {
+  min-height: 29px;
+  padding: 4px 9px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.work-layout .work-query-tools {
+  padding: 7px;
+  margin: 8px 0;
+  border-radius: 6px;
+  font-size: 12px;
+}
+.work-layout .work-card {
+  padding: 9px;
+  border-radius: 7px;
+}
+.work-layout .work-card h4 {
+  font-size: 14px;
+  margin: 5px 0;
+}
+.work-layout .work-editor {
+  margin-top: 12px;
+}
+.work-layout .work-day-notes {
+  padding: 10px;
+  border-radius: 7px;
+  font-size: 12px;
+}
+.work-layout .work-day-notes h3 {
+  font-size: 14px;
+}
+
+/* Selected mode keeps readable contrast through hover/focus. */
+.work-panel.work-layout .work-mode-switch button[aria-pressed='true']:hover:not(:disabled),
+.work-panel.work-layout .work-mode-switch button[aria-pressed='true']:focus-visible {
+  color: #ffffff;
+  background: #1768e8;
+  border-color: #1768e8;
+}
+
+.work-layout.is-day [aria-label='일간 날짜 이동'] h3 {
+  font-size: 16px;
+  margin: 8px 0 4px;
+}
+.work-layout.is-day [aria-label='일간 날짜 이동'] p {
+  font-size: 11px;
+  margin: 5px 0;
+}
+.workspace-shell .work-panel.work-layout [aria-label='일간 날짜 이동'] button {
+  min-height: 30px;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.workspace-shell .work-panel.work-layout .work-editor input:not([type='checkbox']),
+.workspace-shell .work-panel.work-layout .work-editor select,
+.workspace-shell .work-panel.work-layout .work-editor textarea {
+  min-height: 36px;
+  padding: 7px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+.workspace-shell .work-panel.work-layout .work-editor label {
+  font-size: 12px;
+  gap: 5px;
+}
+
+/* Weekly controls keep touch targets while removing the repeated mode panel. */
+.work-mode-help {
+  display: none;
+}
+@media (max-width: 600px) {
+  .work-panel.work-layout.is-week .work-mode-bar {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    align-items: center;
+    gap: 6px;
+    margin: 4px 0 8px;
+  }
+  .work-panel.work-layout.is-week .work-mode-switch button {
+    min-height: 44px;
+    margin: 0;
+    padding: 6px 10px;
+  }
+  .work-panel.work-layout.is-week .work-mode-bar:not(.has-work-status) > p {
+    display: none;
+  }
+  .work-panel.work-layout.is-week .work-mode-bar.has-work-status > p {
+    flex-basis: 100%;
+    margin: 0;
+  }
+  .is-week .work-mode-help {
+    display: block;
+    font-size: 12px;
+  }
+  .is-week .work-mode-help summary {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .is-week .work-mode-help[open] {
+    flex-basis: 100%;
+  }
+  .is-week .work-mode-help p {
+    margin: 4px 0;
+  }
+}
+
+.work-mode-help summary::after {
+  content: '⌄';
+  margin-left: 6px;
+}
+.work-mode-help[open] summary::after {
+  content: '⌃';
+}
+.work-mode-help summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Mobile week controls live beside the report entry; pending/dirty status stays visible. */
+@media (max-width: 600px) {
+  .work-panel.work-layout.is-week > .work-mode-bar > .work-mode-switch,
+  .work-panel.work-layout.is-week > .work-mode-bar > .work-mode-help,
+  .work-panel.work-layout.is-week > .work-mode-bar:not(.has-work-status) {
+    display: none;
+  }
+}
+
+/* Keep each record's actions aligned, including on narrow daily screens. */
+.work-layout .work-card > .work-record-actions {
+  flex-wrap: nowrap;
+  gap: 2px;
+  overflow-x: auto;
+  max-width: 100%;
+  padding: 2px 2px 8px;
+  overscroll-behavior-x: contain;
+}
+.work-layout .work-card > .work-record-actions > button {
+  flex: 0 0 60px;
+  min-width: 60px;
+  min-height: 36px;
+  height: 36px;
+  box-sizing: border-box;
+  padding: 0 2px;
+  border-radius: 8px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.work-layout .work-card > .work-record-actions > .field-hint {
+  flex: 0 0 auto;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .work-layout .work-card > .work-record-actions > button {
+    flex-basis: 84px;
+    min-width: 84px;
+    font-size: 12px;
+    min-height: 44px;
+    height: 44px;
+  }
+}

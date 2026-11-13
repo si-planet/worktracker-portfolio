@@ -1,0 +1,177 @@
+.export-page {
+  max-width: 960px;
+  padding: 28px;
+}
+
+.export-heading {
+  margin-bottom: 24px;
+}
+
+.export-heading h1 {
+  margin: 4px 0 10px;
+  font-size: clamp(24px, 4vw, 32px);
+}
+
+.export-heading p,
+.export-card > p,
+.export-hint {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.export-card {
+  margin: 18px 0;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.export-card h2 {
+  margin: 0 0 14px;
+  font-size: 19px;
+}
+
+.export-scope {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  gap: 8px 16px;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.export-scope dt {
+  color: var(--muted);
+}
+
+.export-scope dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.export-disclosure {
+  margin: 16px 0;
+  padding: 16px 18px;
+  border-radius: 10px;
+  background: var(--surface-muted);
+  font-size: 13px;
+}
+
+.export-disclosure p {
+  margin: 0 0 8px;
+}
+
+.export-disclosure p:last-child {
+  margin-bottom: 0;
+}
+
+.export-choice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 20px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.export-choice input {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  accent-color: var(--accent);
+}
+
+.export-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.export-progress {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.export-progress [aria-current='step'] {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.export-downloads {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.export-download {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow-wrap: anywhere;
+}
+
+.export-download code,
+.export-scope code {
+  font-size: 12px;
+}
+
+.export-download .button {
+  width: 100%;
+  margin-top: auto;
+}
+
+.export-requested {
+  margin: 0;
+  color: var(--accent-ink);
+  font-size: 13px;
+}
+
+.export-error {
+  padding: 14px 18px;
+  border: 1px solid #e3c1ba;
+  border-radius: 10px;
+  background: #fff7f5;
+  color: #8b3022;
+  font-size: 14px;
+}
+
+.export-result-note {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+@media (max-width: 640px) {
+  .export-page {
+    padding: 20px 16px;
+  }
+
+  .export-card {
+    padding: 18px;
+  }
+
+  .export-downloads {
+    grid-template-columns: 1fr;
+  }
+
+  .export-actions .button {
+    width: 100%;
+  }
+
+  .export-scope {
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 8px 12px;
+  }
+}

@@ -1,0 +1,46 @@
+.monthly-focus {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  overflow-wrap: anywhere;
+}
+.monthly-focus label {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0.75rem 0;
+}
+.monthly-focus input,
+.monthly-focus textarea {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+}
+.monthly-focus textarea {
+  min-height: 7rem;
+}
+.monthly-focus .monthly-focus-check {
+  display: flex;
+  align-items: center;
+}
+.monthly-focus-check input {
+  width: auto;
+}
+.monthly-focus button {
+  margin: 0.25rem 0.25rem 0.25rem 0;
+}
+.monthly-focus-detail {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.monthly-focus-editor {
+  margin-top: 1rem;
+}
+.monthly-focus [role='alertdialog'] {
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--accent-soft);
+}

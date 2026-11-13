@@ -1,0 +1,19 @@
+.work-importance-control {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+.work-panel .work-importance-control label.workspace-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  min-height: 44px;
+  margin: 0;
+}
+.work-importance-control .field-hint {
+  display: block;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+}

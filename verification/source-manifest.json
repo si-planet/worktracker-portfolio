@@ -1,0 +1,847 @@
+{
+  "files": [
+    {
+      "file": "public/icons/work-tracker-192.svg",
+      "sha256": "d81f72e8760833a74eacf33376f5960b62877126a1a4970a1a543bd31f86a5fa"
+    },
+    {
+      "file": "public/icons/work-tracker-512.svg",
+      "sha256": "70a9edd9f901f029a9f01654506afd39482c3c9660cda1cc46567fde6856c1b7"
+    },
+    {
+      "file": "public/icons/work-tracker-maskable.svg",
+      "sha256": "f0d3b2b481782439126548885e1ad19c1ed2910588d734fe8be128441fb3a61d"
+    },
+    {
+      "file": "shared/README.md",
+      "sha256": "2649c1071210edb1ab19bd7d8de94ce4889d2dafe92da79f359eefc1abbdb7d7"
+    },
+    {
+      "file": "shared/account-transfer-channel.ts",
+      "sha256": "258fe2203d8ec77f0e4a28ef25f46f9f31a4bd2263f586766e39f6f9f2bf6eb2"
+    },
+    {
+      "file": "shared/day-calendar.ts",
+      "sha256": "359a8be9a7108e5d311d8833a72277c5d9fc38e570555116a5168d4ff390ad84"
+    },
+    {
+      "file": "shared/export/canonical-equal.ts",
+      "sha256": "a4eb86cad35d07e9cccd401c6de1515d71bfa5cb4958ddf48036052cf9877f15"
+    },
+    {
+      "file": "shared/export/dataset.ts",
+      "sha256": "67966246499b09cf19efa686ff312d83dadb1d4982544eb19f79f4b7d97a4164"
+    },
+    {
+      "file": "shared/export/pair.ts",
+      "sha256": "b72d1bd99c1c3d72fdb400c1530ec3182c8886d95ba002e17db2a676ad93a65b"
+    },
+    {
+      "file": "shared/export/v6-dataset.ts",
+      "sha256": "239a7c06e4e1b17aba8aa94400f28a40fe9caf7bcb0d0862d3bb5d2f333e6fc2"
+    },
+    {
+      "file": "shared/export/v6-pair.ts",
+      "sha256": "1b98c758c012cfee78d802895c978bfe7ae99b815f37c241d5324eea81290816"
+    },
+    {
+      "file": "shared/export/v6-workbook.ts",
+      "sha256": "1023d10ffd86cecc6387af7e6116d024cf66bf98445eca835120fcf9383dec03"
+    },
+    {
+      "file": "shared/export/workbook-model.ts",
+      "sha256": "35dc1fd2ef99fcf3f61b00072261368899b1d0591c662922eca3fad344606c0f"
+    },
+    {
+      "file": "shared/export/xlsx-writer.ts",
+      "sha256": "eff0461406924231dfe85d548d668e5708c4a5a632e61335b290982471de99f1"
+    },
+    {
+      "file": "shared/korean-holidays.ts",
+      "sha256": "5ed234de7acad99342176b7141cfb2be367e436f4b0694403abef14f7cc65b4a"
+    },
+    {
+      "file": "shared/leave-ledger.ts",
+      "sha256": "783de222667ce3d8f8636a525b1b2abcced38b197b07a899a3eaac8f5809cb6c"
+    },
+    {
+      "file": "shared/month-calendar.ts",
+      "sha256": "93db5c28b71ef76186762d12be8792e7966c96f32556a13ff6695a3cbb102b58"
+    },
+    {
+      "file": "shared/recurrence-candidates.ts",
+      "sha256": "28251a0eae53b0c55e203254bdbb6a0bfcdb3da03213c853500ea794e31cf503"
+    },
+    {
+      "file": "shared/schema/account-transfer-rpc.ts",
+      "sha256": "373baf00c0bef859ac9e7b0eef1677426d560490c4377f38ad6a7100a1686112"
+    },
+    {
+      "file": "shared/schema/account-transfer-source.ts",
+      "sha256": "33ddefdfb97198a4ec93896a873fddaece6f7deb4d39fdd739ab7ed36660f29c"
+    },
+    {
+      "file": "shared/schema/account-transfer.ts",
+      "sha256": "d04469bde31ca8ed54eae861ccc7700c57c13793d61f65200de9518beab09900"
+    },
+    {
+      "file": "shared/schema/account.ts",
+      "sha256": "54e3c0844734e044a4870a6e57351ac3389a6f5fdbb579216b70c54517d53d7a"
+    },
+    {
+      "file": "shared/schema/auth.ts",
+      "sha256": "ef471f2e5ec21be76deb8ea145e4327387c6d413aeba8b6f40219cac6a283253"
+    },
+    {
+      "file": "shared/schema/category-color.ts",
+      "sha256": "6bb2231b2d2fd66d18a1b08a9a11c319e755dfacdfc07a0dc043003552867c1d"
+    },
+    {
+      "file": "shared/schema/company-admin.ts",
+      "sha256": "aa9b15cb807b2bd49dd4b25997c4206a01cadfd26e93c07ef34b165e3ae025d2"
+    },
+    {
+      "file": "shared/schema/confirmed-worklog-recovery.ts",
+      "sha256": "11a79ec2e9f64a05b5336d816f427aff557a66542050d02fede467fd884d3b62"
+    },
+    {
+      "file": "shared/schema/deadline-placement.ts",
+      "sha256": "1bb7d66a5b5f5544fe8037386540dfbee2c90c7cc4c3c332439a836830f04d73"
+    },
+    {
+      "file": "shared/schema/email-change.ts",
+      "sha256": "317b111e580c2e1139ada31fdc653a900ec8646fb2a2d6e8f8399921d7ea65ac"
+    },
+    {
+      "file": "shared/schema/export-dataset.ts",
+      "sha256": "0e7ce400560af18b2f979776a03156401156801dd0c9f9313725e596c01ad8a9"
+    },
+    {
+      "file": "shared/schema/leave-ledger.ts",
+      "sha256": "e313280373a27eaf2cf865be23c6bcde67ce3ed67261571f0188260be5ec8142"
+    },
+    {
+      "file": "shared/schema/monthly-focus.ts",
+      "sha256": "7aab1022778f3a8cbde933bbb168309475bfda1337fed32e287d9f6fc28220ed"
+    },
+    {
+      "file": "shared/schema/note.ts",
+      "sha256": "eca19c4d3c64fa5b5a3a71c2abbd73476681f0d9501a268d24c19ba817f2a643"
+    },
+    {
+      "file": "shared/schema/period-document.ts",
+      "sha256": "c0a796f969b8807d90e84228180ec2164d8ffd3056d0679b2305d5ccc57e379c"
+    },
+    {
+      "file": "shared/schema/plan-report.ts",
+      "sha256": "338752c53a355b7ef9c0304d04ed45db06e5bb627906ce97049f3c96ce5d4279"
+    },
+    {
+      "file": "shared/schema/recurrence.ts",
+      "sha256": "7db85f9b99c5c9bea823c3bca636b78c6caadeea35b85a054a165cd80c0e61b8"
+    },
+    {
+      "file": "shared/schema/tags.ts",
+      "sha256": "5f0eb7b235b144df147cf1f2f7d698b9a3bf77fd5023f9d52325bc3e221e295b"
+    },
+    {
+      "file": "shared/schema/wbs-actual-period.ts",
+      "sha256": "47846760a27de033f5b86020102068918dc60ae457664f6617311994e775c878"
+    },
+    {
+      "file": "shared/schema/wbs-completion.ts",
+      "sha256": "e90e048ad45ea734adafd41472d0074593436ac26c4f7345c3b32d7d7ce3bb7a"
+    },
+    {
+      "file": "shared/schema/wbs-excel-import.ts",
+      "sha256": "9c45fbba9c7738cde9ad48492c1c5aa695d12c869d5e64ed03561bc8cc0b5514"
+    },
+    {
+      "file": "shared/schema/wbs-goal-import.ts",
+      "sha256": "436321fb28f6e7838a0b7ea4e2e8ebcb0d6e08f99163b9e901cfcaa6a7b2c983"
+    },
+    {
+      "file": "shared/schema/wbs-planner.ts",
+      "sha256": "829576c8fd108161e9a5df78fa20bdd01997faf6bffedbbf8f4e1c2cd2c9d080"
+    },
+    {
+      "file": "shared/schema/wbs-work-link.ts",
+      "sha256": "ea8cf2510ce3607322e9f1de98a53fb11ba28644ac7cdaa8352c6b5555b1c235"
+    },
+    {
+      "file": "shared/schema/wbs.ts",
+      "sha256": "ab45800149492c2c732aafbfd28381738cc167a7c054d1f9b7022b607917cb5c"
+    },
+    {
+      "file": "shared/schema/week-view.ts",
+      "sha256": "f99ae9cb0fbd2e2d804e61ce4de418a6a6796970950cda26ba04ea7190013143"
+    },
+    {
+      "file": "shared/schema/weekly-goal.ts",
+      "sha256": "3e355bc37906ec10e1f1a20ff3b25aec5ad834ed96d6add489a47f43be1984b5"
+    },
+    {
+      "file": "shared/schema/weekly-recurrence-candidates.ts",
+      "sha256": "858015cc5cdd93fceccf4aa88d662d02a9f5938fff88c3c2f0cd03bf88b8ba05"
+    },
+    {
+      "file": "shared/schema/weekly-summary.ts",
+      "sha256": "e13bb59d02ea5c98975d45bbfce0b8db1ee698b49febe1f99c11b89031232949"
+    },
+    {
+      "file": "shared/schema/work-carryover.ts",
+      "sha256": "e3cbeca24f73f97ef9d670f057946c2526cde0b1085bacf72fd42bf8f419a178"
+    },
+    {
+      "file": "shared/schema/work-color.ts",
+      "sha256": "42626a17cc95856e0ee49135c1a179890b20f50756cbeb0a90fe5a81526f80f0"
+    },
+    {
+      "file": "shared/schema/work-duplicate.ts",
+      "sha256": "a849e507be0eb52ef43558f0bfd940c4aaaad5653f33c7da71dc7dabf9790efd"
+    },
+    {
+      "file": "shared/schema/work-entry-source-labels.ts",
+      "sha256": "d05d4872b22551121a6d34b78c00ae08cd3eb00d1bbe70eda6065e255d0bac6b"
+    },
+    {
+      "file": "shared/schema/work-entry.ts",
+      "sha256": "48eb8850812c8461e288c43deda4e53e9990116a311651c2d200a8733ad74d8b"
+    },
+    {
+      "file": "shared/schema/work-importance.ts",
+      "sha256": "83aad3f765fda4a7bad8d1f4ff87565bfb40e33f1ad14e00c51a72656f1bb204"
+    },
+    {
+      "file": "shared/schema/work-query.ts",
+      "sha256": "a58f59bfe176e5b5d0ba82c997e74a4d29a75cf61a6f377f37e327f82b1b71a7"
+    },
+    {
+      "file": "shared/schema/work-reschedule.ts",
+      "sha256": "882fb6429aa3613bcbdebc233345cb89f6c33544371470cafe97367faace5a88"
+    },
+    {
+      "file": "shared/schema/worklog-import-package.ts",
+      "sha256": "9914025f7ce16f10f43ddd183360ded4d15a2d8816ff03970f4ed8d560927d13"
+    },
+    {
+      "file": "shared/schema/worklog-import.ts",
+      "sha256": "a8f80f682bb06fa29ac20010cb9461e8c7c5e3f8d951648617c69f69ac11a1a8"
+    },
+    {
+      "file": "shared/schema/worklog-recovery.ts",
+      "sha256": "81d33e69e991a78dc6c873caf201b94017e2eaf7cb48ac195cc4b347c9856bc4"
+    },
+    {
+      "file": "shared/schema/worklog-source.ts",
+      "sha256": "4ff89215f3a861bc4e1b48a5c3582450bc4ff46cc451130318c135b027d11ff6"
+    },
+    {
+      "file": "shared/schema/workspace.ts",
+      "sha256": "dd13830fdba61ff864f9c5b78d17452e911ba21e530c36c145d893ac200cd3e2"
+    },
+    {
+      "file": "shared/search-filter.ts",
+      "sha256": "9901542eb0778289de7f21616678b25c17e8c3994482ee9f8b3de541d369d40a"
+    },
+    {
+      "file": "shared/week-calendar.ts",
+      "sha256": "6c6f375d9591ffcdffb9fe738ab6c68bae8b44bad010d6e2249517906907e53e"
+    },
+    {
+      "file": "shared/week-placement.ts",
+      "sha256": "d9b7969996124ae45af5413bab74c0e0df7f324cdeeb0f4d5a9e01ec18c4abd0"
+    },
+    {
+      "file": "shared/weekly-recurrence-candidates.ts",
+      "sha256": "6308c20297ae3d4bca4fa78fcf31bbd0f8e6c82e36d5caacee10a5a6fabd52c6"
+    },
+    {
+      "file": "shared/work-duplicate.ts",
+      "sha256": "1e85f2eaf01801a1d3db6425407206acc5080e7e0cee9d2778a2d6908b209986"
+    },
+    {
+      "file": "shared/work-entry-rules.ts",
+      "sha256": "79ac7d635a10b0c105f609b6b8eecb137c1b17c91940156abf2961ca5d1316c6"
+    },
+    {
+      "file": "shared/work-paused.ts",
+      "sha256": "09fba585dd8ed2005ce8a0f5065981018268daf19902d83f1d55c80ed44fb80b"
+    },
+    {
+      "file": "shared/work-state-projection.ts",
+      "sha256": "8b0cb477bfabacb24c6316d16e8774a4cc1d825a413db9a6acb002d2b5d140da"
+    },
+    {
+      "file": "shared/workspace-landing.ts",
+      "sha256": "ff8cd334a3163085933df814f204f254028667e76ebd4f834dd1c88d5281af94"
+    },
+    {
+      "file": "web/account-settings.tsx",
+      "sha256": "6f02ce75304d2c9514a2b4759797ad59b4925abf699154160edd535edb255463"
+    },
+    {
+      "file": "web/account-transfer-api.ts",
+      "sha256": "7a9dcf64584d1bdc667cf13920405187316d068ec57e51ef3c0a7d210756c3c2"
+    },
+    {
+      "file": "web/account-transfer.tsx",
+      "sha256": "457d5f3d2ed4861daf0a2665ba7c484296fa7219d035df5ab75c901bba1e8af9"
+    },
+    {
+      "file": "web/annual-calendar-model.ts",
+      "sha256": "61895ab92d9ce533fbf9bd89560065ef906a7cdfecde3d234b7c621b3aefdc5e"
+    },
+    {
+      "file": "web/annual-calendar-month.tsx",
+      "sha256": "79f68320e43ed3a8917857acf3a16726184a1e66caa6f5c8440a1ed93100ca66"
+    },
+    {
+      "file": "web/auth.tsx",
+      "sha256": "abb40e4eb154e3c821ef3516ea6d94c3d8c73cfd1bdb81b8d372a901683d5a2f"
+    },
+    {
+      "file": "web/calendar-display.ts",
+      "sha256": "9e9064a641b2fb4da3b19c656f09f56844a28398bec41111c9673f22b548f7fa"
+    },
+    {
+      "file": "web/calendar-work-api.ts",
+      "sha256": "444fd56ccddd0641d345c66a52069f47324502fd5b54d2734b67ecef6e94b9bc"
+    },
+    {
+      "file": "web/category-color-control.css",
+      "sha256": "bbab7b6ec040b297e4f05d78ea3854aeccf0e680661d6856095a8c6e40c2a5a6"
+    },
+    {
+      "file": "web/category-color-control.tsx",
+      "sha256": "e6cb36621a2d4bbc9d0c86c8587471740396cbdba44cd908b470634c7985ab6d"
+    },
+    {
+      "file": "web/category-colors.ts",
+      "sha256": "d5c2cd64504cf47f4dc69e3d97e73fb420f2a5ab02ad93b0b7f880fb56b8a200"
+    },
+    {
+      "file": "web/confirmed-period-model.ts",
+      "sha256": "3111466cbf19749f92dfea1224fcc9ebbcbfb57bf6fcc713df6130a3003f3dcf"
+    },
+    {
+      "file": "web/daily-sheet-model.ts",
+      "sha256": "e30782257137a37cdcb1131ff026e4d39eebc296943ae5335a6b752f2ca2bf9b"
+    },
+    {
+      "file": "web/daily-work-sheet.css",
+      "sha256": "132be7879d63abda3df6d244b20f8cba79532db14c1f7a536424548cf781e0f2"
+    },
+    {
+      "file": "web/daily-work-sheet.tsx",
+      "sha256": "3a264b331a48f5c4e7d0f9af4f4d5c3046510e2aab34efdfbe4300706df1bc67"
+    },
+    {
+      "file": "web/day-navigation.tsx",
+      "sha256": "8454faccfc1531e309851bea001bc2170ed40380fd61595d63977de3524c963d"
+    },
+    {
+      "file": "web/deadline-placement.tsx",
+      "sha256": "fc58b0b3c5592d1a02d64292cb0cb3573ed17d7d81fc2061f8f08733e482515c"
+    },
+    {
+      "file": "web/email-change.tsx",
+      "sha256": "2b77d28e550d8bcb33669da48309ce011770d6d8c7441cb6cb426cc6997da5b9"
+    },
+    {
+      "file": "web/export-api.ts",
+      "sha256": "ae4d99fcbc0fe0b0916e390774a7905580a1b8c1b04f545011a01b9abcdcba77"
+    },
+    {
+      "file": "web/export-worker-client.ts",
+      "sha256": "c434d82333dadd411f4d086b9c5dc9d000f22b192f1a6eb6bfef919c190ca80d"
+    },
+    {
+      "file": "web/export-worker.ts",
+      "sha256": "f8d24899bad6d5b22d8876687c27e25c0d700c0cbad124a379328b4efe6b72c4"
+    },
+    {
+      "file": "web/export.css",
+      "sha256": "c6cc02d0a303898dbdd6aa8735d0940d980aa3963b63fd517eba596d24934e72"
+    },
+    {
+      "file": "web/export.tsx",
+      "sha256": "82166ec5e5fad5655209005bf2b3c7c8746bb759572731d36e4b5abc4f4fabc1"
+    },
+    {
+      "file": "web/goal-api.ts",
+      "sha256": "c1239b9e47758143393eee89eff0492d551aba818ecac96443ae3e63648a4fad"
+    },
+    {
+      "file": "web/goal-placement.tsx",
+      "sha256": "ca2c3fe0638fcee7a50b72ab1bb49ee3d1a2bdb6c189954db381850f34f609a2"
+    },
+    {
+      "file": "web/imported-period-note.ts",
+      "sha256": "5c7e6d2630c7e26f63da8ef43b73b10576605643a1372ed4d16002ef2fa03bf7"
+    },
+    {
+      "file": "web/leave-ledger-api.ts",
+      "sha256": "0207f1ef216f8d97477a2796d1962847e0ba52d7c841f8cf91008027aa1ad6e4"
+    },
+    {
+      "file": "web/leave-ledger.css",
+      "sha256": "dda392e7d808df1c3858d35cd1aa227b9b85024cb4d5c1109967fe57d7305a1b"
+    },
+    {
+      "file": "web/leave-ledger.tsx",
+      "sha256": "389cf2b849fe3a0145a821409212d839447b93aaeb5a50ef7eed5c73168ccbef"
+    },
+    {
+      "file": "web/main.tsx",
+      "sha256": "28ff86d38c0b461f7fcc42eb2d1adc5a3d2fea6052a414092161f5709d2236cc"
+    },
+    {
+      "file": "web/month-period-model.ts",
+      "sha256": "bf6df54c357b677675e6ab40b830ced9b65030d994f4037f394cab52c8311f37"
+    },
+    {
+      "file": "web/month-schedule-create.css",
+      "sha256": "9707ce069c219cb4748b73392db16551e2475ceea3515779d8bdc4aedf38a8f3"
+    },
+    {
+      "file": "web/month-schedule-create.tsx",
+      "sha256": "b0f2d12a3e9f4b315051a22c938f860f1cc4e47c2b22b00dba5775a3e6369417"
+    },
+    {
+      "file": "web/month-view.css",
+      "sha256": "2fa7d5a243cdab4d9cbdd614d37a89b2e4adcc5df1fe37998f3050094cc10054"
+    },
+    {
+      "file": "web/month-view.tsx",
+      "sha256": "af25c9770d2caaafee577d697b811b67b2cd92ba4a64ec93ea887a3009b70f6e"
+    },
+    {
+      "file": "web/month-work-appearance.ts",
+      "sha256": "33bef1842b60c82a0fe72f0a863bc7e24a3dafca69f959b01aba13dcf27721cd"
+    },
+    {
+      "file": "web/monthly-focus-api.ts",
+      "sha256": "28861dcaa795a768e6949568ed2b01343313b718fc4bcbc00583be2aa2f5d21f"
+    },
+    {
+      "file": "web/monthly-focus.css",
+      "sha256": "33c74cb799680c2dd5a92f5261fd8028a0df74bbe83b5c6b7ccc2d616257356d"
+    },
+    {
+      "file": "web/monthly-focus.tsx",
+      "sha256": "e102e7f30910b63141a91fefc34aecc56cf7b88fcb72ec93275a32ce5c433660"
+    },
+    {
+      "file": "web/notes-api.ts",
+      "sha256": "9f3c1328ee45349facd6b23c262d78329ec916c32db079ad695002f25d23c8fd"
+    },
+    {
+      "file": "web/notes-feed.tsx",
+      "sha256": "c1653399f717947942acf06b25dcb45968e67794e8a9f5a2b67c1f7dc9f49884"
+    },
+    {
+      "file": "web/notes.css",
+      "sha256": "c4779c8ccc162132c794d539dd07ab6b5070b971f18f53c2d1f76eac16131f3f"
+    },
+    {
+      "file": "web/password-recovery.tsx",
+      "sha256": "25b3c2a93b23412b5e3c93e75478a8bcfb4b34789cc5319ebec8d5c9f7893040"
+    },
+    {
+      "file": "web/period-document.css",
+      "sha256": "86db30ff61dfa4710e1b5d5fcabc6b74b2f9ba1e00139781343fa383de32cea4"
+    },
+    {
+      "file": "web/period-document.tsx",
+      "sha256": "3594ffb21724f69f4c61fcce22616f63ba8020f3a00febf15efb4429ec8e7b25"
+    },
+    {
+      "file": "web/project-admin.tsx",
+      "sha256": "1c8fe11551c9b5771f04653ec53be3ce8fbe7628342d597f726bca6cb87b941d"
+    },
+    {
+      "file": "web/pwa-env.d.ts",
+      "sha256": "d16c5ed879d778c3c8163656d524788bf54716fe0b6ee21a8201f92dea5b197a"
+    },
+    {
+      "file": "web/pwa-runtime.ts",
+      "sha256": "865152aaa5db3ab6f3288f10434796b596ee91533160b239e4a5ec917dfcfd9b"
+    },
+    {
+      "file": "web/pwa.css",
+      "sha256": "1bbafb11c1ac59ad18b32e6954cd716ff510db9f82fe445f1f92ad40e2fa64c4"
+    },
+    {
+      "file": "web/pwa.tsx",
+      "sha256": "d8054dffa7e424ab2464c2af1e3d970a0d6cd118dcfc41618bc3ba578155af17"
+    },
+    {
+      "file": "web/real-worklog-calendar-model.ts",
+      "sha256": "7808b39523d05df6b44298aa1801dec136073a22ab0429f0f517e11b69d0c416"
+    },
+    {
+      "file": "web/real-worklog-calendar.css",
+      "sha256": "e9198ea774efc2843aed8e1306af9c47b4ae6db94afea34d157132f13dd53d35"
+    },
+    {
+      "file": "web/real-worklog-calendar.tsx",
+      "sha256": "2014480df321c8626e798e7c6866c9183813d82b83cffa7e50b107881c30c636"
+    },
+    {
+      "file": "web/real-worklog-review-api.ts",
+      "sha256": "a613677e2483a08f4a20e3ad6afd646ad57d516beecb7e31d1b172098f2fbf78"
+    },
+    {
+      "file": "web/real-worklog-review.css",
+      "sha256": "bf6b0940a49e9972c85736b4ddc0fda45e5bee3b92a19978c29bc31328ee6b58"
+    },
+    {
+      "file": "web/real-worklog-review.tsx",
+      "sha256": "d137cb4c7ca78629b8ac60fb218e12fe99eb0286a4c013799618f06d8f6a4d10"
+    },
+    {
+      "file": "web/recurrence-api.ts",
+      "sha256": "fb3eacb28fa1c60610deb8a97dee49d05b1d9e1fb71f064dc9e1cf989869206b"
+    },
+    {
+      "file": "web/recurrence.css",
+      "sha256": "63fddf793e29652c33b88ceb5f4c9b330272db96df9af5b1c1ad640d20075af1"
+    },
+    {
+      "file": "web/recurrence.tsx",
+      "sha256": "20f77a9d9e9c392a5823604b6c24a2b55f764ade55b77453413ca868409ec4b1"
+    },
+    {
+      "file": "web/search-view.tsx",
+      "sha256": "7c268a2aa18a9f56c04464124933cdcde887fe1342d35340fe9163ba0bc2f309"
+    },
+    {
+      "file": "web/styles.css",
+      "sha256": "9cac189c0622fd50c5f1a45116363faebd4fcc9ab160dc1eaca36e15719b4e1e"
+    },
+    {
+      "file": "web/tag-admin.tsx",
+      "sha256": "03134b738e6aa6b46df79f8261a889611773674a3a1e013998687ea115e2d6e2"
+    },
+    {
+      "file": "web/ui-controls.tsx",
+      "sha256": "1f0c60e2cb5b62674de6bddb3a29a26bbb796f57d91d400cb99d5eeda6621091"
+    },
+    {
+      "file": "web/use-annual-work-calendar.ts",
+      "sha256": "d9eb05dfcd7c4cba75847a69d061d3bd495be19b8557ee3121bdfbcbbc7b7bb6"
+    },
+    {
+      "file": "web/use-work-colors.ts",
+      "sha256": "47494a6cac4d6c25d93d44a747e0a039d1a34bc5b6f20d43f88bbca07852897e"
+    },
+    {
+      "file": "web/wbs-actual-period-api.ts",
+      "sha256": "3b577292cbfe54ad78d4fc8588af6dd1f6a3373a1ba2feaf654179cf07b70f77"
+    },
+    {
+      "file": "web/wbs-actual-period.tsx",
+      "sha256": "15600118753800a1bb58c902ca8343b9357085f3c34627d8c7be7844aa884132"
+    },
+    {
+      "file": "web/wbs-api.ts",
+      "sha256": "c9f4927e39397511a6978bf99aed8a603a0ef369d03be18a44b4b0b6d217a69b"
+    },
+    {
+      "file": "web/wbs-completion.tsx",
+      "sha256": "3e1587bdd98ad3fbd3cb445265a6c78aa37e1fc656ef91253fbd99c603a067b8"
+    },
+    {
+      "file": "web/wbs-excel-import-model.ts",
+      "sha256": "ca81310011cb9242ce8fdc1700d821aebf4f6385315806c7c543d4b4f332f905"
+    },
+    {
+      "file": "web/wbs-excel-import.tsx",
+      "sha256": "dd4c0bb02db1bea30ca2e9a25fed26f5ddf532fe8bbe9051f3aaa5041d8c3e2f"
+    },
+    {
+      "file": "web/wbs-goal-import.ts",
+      "sha256": "ac46435f54efef341b78dc42bb9fbee657d7fbb3a7e2fdd27820a602cecb5a05"
+    },
+    {
+      "file": "web/wbs-item-editor.tsx",
+      "sha256": "6a2afc45967a2add89ce31dafbe0f3322e202563c1bde59b120cab1e2ab3e60c"
+    },
+    {
+      "file": "web/wbs-month-reference-model.ts",
+      "sha256": "c8f6ad4ce94cba7ff3d95352a3623a558232751dea795fb1be080b22f8f23a22"
+    },
+    {
+      "file": "web/wbs-month-reference.css",
+      "sha256": "f63cb4e89b41c1270d220c55ca031f6deca618726c332129fb672309a482d7dd"
+    },
+    {
+      "file": "web/wbs-month-reference.tsx",
+      "sha256": "a3429c761b9a72cfed982e1110757f79115bcc0c245941c02693be849ff7a46c"
+    },
+    {
+      "file": "web/wbs-planner-api.ts",
+      "sha256": "37d3ed7b59f4e93cfddd251c5d599b20ce76877ea40199dd62f2281bb447070a"
+    },
+    {
+      "file": "web/wbs-planner-calendar.ts",
+      "sha256": "463c13970df0358d212402f20fc7eb4f900721037bd8740958d69bbe688a56a0"
+    },
+    {
+      "file": "web/wbs-planner-move-model.ts",
+      "sha256": "5859b2e905d655e4c66af0266b560a8113c9fb92831abac91492757544ffddba"
+    },
+    {
+      "file": "web/wbs-planner-move.css",
+      "sha256": "7a37ed116eaa5add7aa14451d64b2bfc2d7ab4b4b1acf0bbf02f50340d8e8aff"
+    },
+    {
+      "file": "web/wbs-planner-move.tsx",
+      "sha256": "4dcb360e589668d1670ee4b325457df6ae98931150c3837db8dae3a5d7da2211"
+    },
+    {
+      "file": "web/wbs-planner.css",
+      "sha256": "a53c1275a5a22af87d85ae901ec046e392eab0ded88e50c335cedfdf20d2f4aa"
+    },
+    {
+      "file": "web/wbs-planner.tsx",
+      "sha256": "dba2cff54b3c7c238df40a2b8158f46204854f4a4c0a992bb6a4714ea04319f0"
+    },
+    {
+      "file": "web/wbs-work-link-api.ts",
+      "sha256": "9ee40af14118dcbde29b27cf03a3b14bcf8cec27afb1b01cabff688cc361505f"
+    },
+    {
+      "file": "web/wbs-work-links.tsx",
+      "sha256": "4ead2d117b1f4432eb794c7a3f372f8fdfbd89d8972f9fe840a14ea96a8aa067"
+    },
+    {
+      "file": "web/wbs.css",
+      "sha256": "f79a1fa38f8af836894969411e0ead7ce36f8ec95fce962e7ea667d6619f68f4"
+    },
+    {
+      "file": "web/wbs.tsx",
+      "sha256": "e8287b001a6eaa6668787a1fcbf82ad61ece4b27b2270899afa1c9914805ce38"
+    },
+    {
+      "file": "web/week-goals-overview.tsx",
+      "sha256": "36d05fda958587599160118d890f488fc6f690a79c9aad031788fa078db3ba5c"
+    },
+    {
+      "file": "web/week-hub-model.ts",
+      "sha256": "43a68f74134611751e3b9773f54d4b2785bfc4bf6ebd39e57133c7ac4f37690d"
+    },
+    {
+      "file": "web/week-report.tsx",
+      "sha256": "e6cf2131e5c3c05dc47b4ed30c8664ea4e015b81808dd6da4daeb4d1290b47f6"
+    },
+    {
+      "file": "web/week-support-panel.css",
+      "sha256": "5650b209ef5c746b8d990f1b595eaf684a43ae5696060a872fe374eeee50298f"
+    },
+    {
+      "file": "web/week-support-panel.tsx",
+      "sha256": "3232479704dd7780f80b28d407dcfbf160b1aef13b394c8a1a8cc4d151fd2ee1"
+    },
+    {
+      "file": "web/week-view.css",
+      "sha256": "3551a650d7e4ee3a1c918da2883285e5fcbb97ca5c4ac582a389110b2d56d573"
+    },
+    {
+      "file": "web/week-view.tsx",
+      "sha256": "9f24d7555714e7b721118aad65796d857e85136d1804813c1690cbd8dccde8a7"
+    },
+    {
+      "file": "web/weekly-goals.css",
+      "sha256": "ca2a95006d2e1642368be9c5e0d1f2683664faf0a6d0bfeb481f396cfb1b55ac"
+    },
+    {
+      "file": "web/weekly-goals.tsx",
+      "sha256": "4eae21470f05778b77a52e7a954a84da8210730aea30700781b0f3175dc07acf"
+    },
+    {
+      "file": "web/weekly-summary-api.ts",
+      "sha256": "5d797019b7afea96b1a088ded4c1c05b4f0fd248b4905bce386e67eb4215fbf2"
+    },
+    {
+      "file": "web/weekly-summary.css",
+      "sha256": "13c19af2ab325f6068d67a327dbae076fe7151bc542472d168b52f3ce516f5ae"
+    },
+    {
+      "file": "web/weekly-summary.tsx",
+      "sha256": "88c0a5ed84fdc107eebf58a83c3f360551bc49998346f12d83671e4c0f56956a"
+    },
+    {
+      "file": "web/weekly-work-list.css",
+      "sha256": "b2a9e81b9173641317cbc9a03f6f24b891614a7dad39a12860cfe45f77d93021"
+    },
+    {
+      "file": "web/weekly-work-list.tsx",
+      "sha256": "b3f6ac0c7db9806ffa79c90dd93d0f832f6bc3a2388f6b865f93363ed1135a08"
+    },
+    {
+      "file": "web/work-carryover.tsx",
+      "sha256": "b04c7b9ff8a49af7e6eff61495c139bb573c74240e54ea5a23d66d474ab184ee"
+    },
+    {
+      "file": "web/work-color-api.ts",
+      "sha256": "e7a66fd63b18d87f243da7d717df23f52ce2084425183bd41f1333a2d211794d"
+    },
+    {
+      "file": "web/work-color-picker.css",
+      "sha256": "40db100b0eb7cb3105cfc7ee4e33b6888722a4e895d18218f0524fa01ba8abf4"
+    },
+    {
+      "file": "web/work-color-picker.tsx",
+      "sha256": "4b717d0c1778943fa85dcc89fbc14fd9ef255699e9cce432403dd3be2144d53a"
+    },
+    {
+      "file": "web/work-deadline.css",
+      "sha256": "6d7e731ef2a6a8112b5cef29b12c32c2d50b268ab1eacfbe418bac5f6a60e6bf"
+    },
+    {
+      "file": "web/work-deadline.tsx",
+      "sha256": "fdbf90d4669269993cd3f292fbb0613d22d1e2f00cd67a79d9dcab3fecefed43"
+    },
+    {
+      "file": "web/work-dialog-surface.css",
+      "sha256": "f1a2680f1305fb4b8f169a9ac6967c0e7c147f7376b8c502f18402810ee88a97"
+    },
+    {
+      "file": "web/work-dialog-surface.tsx",
+      "sha256": "bfe9040713ce0c268021c25d8b08b9e25d5b723902d25775c6700ce126e06b2e"
+    },
+    {
+      "file": "web/work-duplicate-wbs.tsx",
+      "sha256": "1965faa98447ac50e881fbf54aea63fca54b2007d3fd092a9b32b80409fd5826"
+    },
+    {
+      "file": "web/work-entries.css",
+      "sha256": "1e88c2cf03e34d5129bc00d92724ac1f50afcbcc0d3070bad3e83dd960b946d4"
+    },
+    {
+      "file": "web/work-entries.tsx",
+      "sha256": "7ce9c330ad1e1a04690af6e4237aca11f1da7b48b82ba4154ab9d00d9d7554cb"
+    },
+    {
+      "file": "web/work-entry-api.ts",
+      "sha256": "9989256010168759126249a0ba05faf24f24d283e8060b54ce58da88ce6a0908"
+    },
+    {
+      "file": "web/work-entry-draft-reconciliation.ts",
+      "sha256": "89091aeb4f24db5814227780c0fed470c50de467751cb13302292845356e39ed"
+    },
+    {
+      "file": "web/work-entry-notes.tsx",
+      "sha256": "e336c58f1a99e063ce1d8ff119c5aeedafd5e51850997d5918896f6b89cb6ced"
+    },
+    {
+      "file": "web/work-importance-api.ts",
+      "sha256": "0f31b3b252a703a360eb5781e6883b65b8ec7aea03279ea538a1fa122ccdc854"
+    },
+    {
+      "file": "web/work-importance-checkbox.tsx",
+      "sha256": "402700bb28f25f8a54a3b77abdeb1aad506b42703db6a3b86c4351d21f40a4db"
+    },
+    {
+      "file": "web/work-importance-state.ts",
+      "sha256": "9004052949f3e9891b388254de1068c08e820f7d8b22bf6f70b195b74765782c"
+    },
+    {
+      "file": "web/work-importance.css",
+      "sha256": "94916ac0030c17ea58e33780ce9e9c16782e093d46ca9ba47ea5715f6fb9257b"
+    },
+    {
+      "file": "web/work-layout.css",
+      "sha256": "1cb5886bf313eee94e855d51b24d2a91ec268f42f1978bb5a8feb7a9d00da3d4"
+    },
+    {
+      "file": "web/work-reschedule.tsx",
+      "sha256": "953960137ebb9736cdd7547590b41cc297f6dc980413dcb112cfd5ba78b7dd0f"
+    },
+    {
+      "file": "web/work-source-labels-api.ts",
+      "sha256": "20f5f4b9a36ff19395ceb7a62367b5dc540cd289e25a4fcf76b1be9c851e826b"
+    },
+    {
+      "file": "web/work-source-labels.css",
+      "sha256": "221b32cf28694fef6fa57cd3a9b153a6bd296d5a3b6a1c22ca0c2a70c5c6836a"
+    },
+    {
+      "file": "web/work-source-labels.tsx",
+      "sha256": "6798577b75a25016a1e4c5be99543b0ce38b21fb05de1abe75e4a9adea14e5ca"
+    },
+    {
+      "file": "web/worklog-import-api.ts",
+      "sha256": "9c1396a835cfe8dd9dfe17241a5a5bcb37d89152307541f3efa834582cc2338f"
+    },
+    {
+      "file": "web/worklog-import.css",
+      "sha256": "89af23c09809bc4df29aad52e769b0d1c27fc5e008239940b90e59c299debaac"
+    },
+    {
+      "file": "web/worklog-import.tsx",
+      "sha256": "e014fc1095d4869b38f3ab74cace33309f1cd2ecd5f2590425c2ce10a1889759"
+    },
+    {
+      "file": "web/worklog-source-api.ts",
+      "sha256": "5f2c387703468b3233b4e5a8e5b16f7bee453f4c984bae851825682e8e5bfdbf"
+    },
+    {
+      "file": "web/worklog-source-review.css",
+      "sha256": "303837bfd061d4cbbf10d20526c967974f1ce987ca0f1e9159175f4f6a6001b6"
+    },
+    {
+      "file": "web/worklog-source-review.tsx",
+      "sha256": "290985c3c49136a8c2a5c952d7315a38869bdb5fbfa9ce6faadcd7aa44cae54a"
+    },
+    {
+      "file": "web/workspace-draft-state.ts",
+      "sha256": "8b0ced7e9f9752f0f51e5be347e9777f6724d8dfe7abd901f434688f5525dd93"
+    },
+    {
+      "file": "web/workspace-loading.css",
+      "sha256": "3c2b5496779bad33cdab9db42cd85560f68331e4a1e517ba6c6ad2736d40b9bc"
+    },
+    {
+      "file": "web/workspace-loading.tsx",
+      "sha256": "5c7fcb6d8168c7772f846c4144c66ee4733a3ae942d8587aabdb7ce7b9225064"
+    },
+    {
+      "file": "web/workspace-shell.css",
+      "sha256": "5914ca42163cca05886790ebbc2d5da6e1fa3d1107edb322d9a49af69e63d6dd"
+    },
+    {
+      "file": "web/workspace-shell.tsx",
+      "sha256": "548182242b534e85389778e0cc03ee4a94a9ca9a9b096624a8f0daa3409b497e"
+    },
+    {
+      "file": "web/workspace.css",
+      "sha256": "7b3da1ba24829b085a3e255282b76efe91114a1d3a55e835b7ad8a8aacf91f78"
+    },
+    {
+      "file": "web/workspace.tsx",
+      "sha256": "da7c207b7616588791c508d2cc3be7508779aeefd8b50f0bcc555ff02419a4cb"
+    },
+    {
+      "file": "web/help-hint.tsx",
+      "sha256": "39b1f8cdd93322e8ee6f054db584dd542d1c501f6c7ff0db4d3f881e472a2840"
+    },
+    {
+      "file": "web/help-hint.css",
+      "sha256": "11a665851d2d5a687915899392ada378f16a08b3b047ede589e7c1df573cbd05"
+    }
+  ],
+  "description": "UI source snapshot used by the synthetic portfolio demo. Hashes verify preservation, not production deployment status.",
+  "adaptedFiles": [
+    {
+      "file": "web/work-color-picker.tsx",
+      "sha256": "793406bc877fb7ce1eac0a2370ac980a8df5f9ea9aca5320a841f40a9ac6d0d2"
+    },
+    {
+      "file": "web/category-color-control.tsx",
+      "sha256": "30a91d84fa0546c99fb55ed360ba2d298e82b95c5bc10dfa34a9eeb8f196897f"
+    }
+  ]
+}

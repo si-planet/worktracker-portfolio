@@ -1,0 +1,27 @@
+.work-deadline-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.3rem;
+  min-width: 0;
+  margin: 0.2rem 0;
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
+.work-deadline-badge {
+  display: inline-block;
+  max-width: 100%;
+  padding: 0.12rem 0.35rem;
+  border: 1px solid #a66424;
+  border-radius: 4px;
+  background: #fff4df;
+  color: #71410e;
+  font-weight: 600;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.week-calendar-event:has(.work-deadline-badges) {
+  flex-wrap: wrap;
+}
+.week-calendar-event .work-deadline-badges {
+  flex-basis: 100%;
+}

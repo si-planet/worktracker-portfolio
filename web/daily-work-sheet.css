@@ -1,0 +1,289 @@
+.daily-sheet-wrap {
+  width: 100%;
+  margin: 12px 0 20px;
+}
+.daily-work-sheet {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.daily-work-sheet th {
+  background: #f5f7f9;
+  color: #495568;
+  font-weight: 600;
+  padding: 9px 6px;
+  font-size: 12px;
+}
+.daily-work-sheet td {
+  padding: 3px 6px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+  overflow-wrap: anywhere;
+}
+.daily-work-sheet .daily-number {
+  width: 34px;
+  text-align: center;
+  color: var(--muted);
+}
+.daily-work-sheet .daily-category {
+  width: 96px;
+}
+.daily-work-sheet .daily-priority {
+  width: 76px;
+  text-align: center;
+  font-size: 12px;
+}
+.daily-work-sheet .daily-completion {
+  width: 52px;
+}
+.daily-work-sheet .daily-remarks {
+  width: 28%;
+}
+.daily-category-cell,
+.daily-completion-cell {
+  text-align: center;
+}
+.daily-category-cell {
+  font-size: 12px;
+  color: #495568;
+}
+.daily-title-cell small {
+  display: inline-block;
+  margin: 0 4px 4px;
+  font-size: 11px;
+  color: var(--muted);
+}
+.daily-title-cell .daily-mobile-priority {
+  display: none;
+}
+.workspace-shell .work-panel.work-layout.is-day .daily-work-sheet button.daily-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  min-height: 38px;
+  padding: 5px 0;
+  font-size: 13px;
+  font-weight: 500;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  line-height: 1.45;
+}
+.workspace-shell .work-panel.work-layout.is-day .daily-work-sheet button.daily-title:hover {
+  text-decoration: underline;
+}
+.workspace-shell .work-panel.work-layout.is-day .daily-work-sheet label.daily-check {
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.daily-check input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+.daily-work-sheet tr[data-status='done'] .daily-title {
+  color: var(--muted);
+}
+.daily-remarks-cell span {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1.45;
+  white-space: pre-line;
+}
+.work-layout.is-day .work-day-main {
+  min-width: 0;
+}
+.workspace-shell .work-panel.work-layout.is-day .work-detail-body {
+  grid-template-columns: minmax(0, 1fr);
+}
+.workspace-shell .work-panel.work-layout.is-day .work-day-notes {
+  border: 0;
+  padding: 0;
+}
+.work-layout.is-day .work-heading .daily-add {
+  margin-left: auto;
+}
+.work-layout.is-day .work-dialog-toolbar button,
+.work-layout.is-day .work-editor button,
+.work-layout.is-day .work-editor .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+}
+.work-layout.is-day .work-editor details {
+  margin-top: 16px;
+}
+.work-layout.is-day .work-editor summary {
+  cursor: pointer;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+.work-layout.is-day .work-editor .work-secondary-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+}
+.work-layout.is-day .work-editor .work-secondary-actions > button {
+  min-height: 42px;
+  padding: 8px 12px;
+}
+.work-layout.is-day .work-editor .work-source-details {
+  white-space: pre-wrap;
+  font-size: 12px;
+}
+@media (max-width: 600px) {
+  .daily-work-sheet .daily-number,
+  .daily-work-sheet .daily-priority {
+    display: none;
+  }
+  .daily-work-sheet .daily-category {
+    width: 56px;
+  }
+  .daily-work-sheet .daily-completion {
+    width: 38px;
+  }
+  .daily-work-sheet .daily-remarks {
+    width: 25%;
+  }
+  .daily-work-sheet td {
+    padding: 2px 4px;
+  }
+  .daily-work-sheet th {
+    padding: 8px 3px;
+    font-size: 11px;
+  }
+  .daily-category-cell {
+    font-size: 11px;
+  }
+  .workspace-shell .work-panel.work-layout.is-day .daily-work-sheet button.daily-title {
+    min-height: 44px;
+    font-size: 12px;
+  }
+  .workspace-shell .work-panel.work-layout.is-day .daily-work-sheet label.daily-check {
+    min-height: 44px;
+  }
+  .daily-title-cell .daily-mobile-priority {
+    display: inline-block;
+  }
+  .daily-remarks-cell span {
+    font-size: 11px;
+  }
+}
+.daily-date-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 12px 0;
+  text-align: center;
+}
+.daily-date-heading h3 {
+  margin: 0 0 4px;
+  font-size: clamp(18px, 3vw, 23px);
+}
+.work-panel .daily-date-heading > button {
+  border: 0;
+  padding: 6px;
+  min-width: 44px;
+  min-height: 44px;
+  background: transparent;
+  font-size: 12px;
+}
+.work-panel label.daily-date-picker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.work-panel .daily-date-picker input {
+  width: 142px;
+  min-height: 32px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+.daily-navigation-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.daily-navigation-footer p {
+  margin: 0;
+}
+.work-layout.is-day .work-heading .daily-add {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+}
+.workspace-shell .work-panel.work-layout.is-day .daily-date-heading > button {
+  border: 0;
+  background: transparent;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.workspace-shell .work-panel.work-layout.is-day label.daily-date-picker {
+  gap: 6px;
+  white-space: nowrap;
+  font-size: 18px;
+  color: var(--ink);
+}
+.workspace-shell .work-panel.work-layout.is-day .daily-date-picker input {
+  width: 174px;
+  min-height: 44px;
+  padding: 4px;
+  font-size: 18px;
+  font-weight: 650;
+  background: transparent;
+  border: 0;
+}
+.workspace-shell .work-panel.work-layout.is-day .work-heading .daily-add {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  min-height: 40px;
+  padding: 0;
+}
+.workspace-shell .work-panel.work-layout.is-day .work-heading > .refresh-control {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  min-height: 40px;
+}
+@media (max-width: 600px) {
+  .daily-date-heading {
+    gap: 4px;
+  }
+  .workspace-shell .work-panel.work-layout.is-day label.daily-date-picker {
+    gap: 4px;
+    font-size: 16px;
+  }
+  .workspace-shell .work-panel.work-layout.is-day .daily-date-picker input {
+    width: 150px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,47 @@
+.wbs-move-dialog {
+  box-sizing: border-box;
+  width: min(38rem, calc(100vw - 2rem));
+  max-height: calc(100dvh - 2rem);
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1rem;
+  color: var(--ink);
+  background: var(--surface);
+  overflow-wrap: anywhere;
+}
+.wbs-move-dialog::backdrop {
+  background: #0008;
+}
+.wbs-move-dialog h2 {
+  margin-top: 0;
+}
+.wbs-move-dialog label {
+  display: grid;
+  min-width: 0;
+  gap: 0.3rem;
+  margin: 0.6rem 0;
+}
+.wbs-move-dialog input,
+.wbs-move-dialog textarea {
+  box-sizing: border-box;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+}
+.wbs-move-dialog button,
+.wbs-move-drafts button {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: left;
+}
+.wbs-move-actions,
+.wbs-move-drafts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.wbs-move-dialog button {
+  min-height: 44px;
+  margin: 0.25rem 0;
+}

@@ -1,0 +1,92 @@
+.period-document {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.period-document-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.period-document label {
+  display: grid;
+  gap: 0.5rem;
+}
+.period-document textarea {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 10rem;
+  resize: vertical;
+  font: inherit;
+  padding: 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--ink);
+  background: var(--surface);
+}
+.period-document-body {
+  white-space: pre-wrap;
+}
+.period-document-dialog button,
+.period-document button,
+.period-document summary {
+  min-height: 44px;
+  margin: 0.25rem;
+  white-space: normal;
+}
+.period-document-dialog {
+  width: min(36rem, calc(100vw - 2rem));
+  box-sizing: border-box;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem;
+  background: var(--surface);
+  color: var(--ink);
+}
+.period-document-dialog::backdrop {
+  background: rgb(15 23 42 / 0.4);
+}
+
+.weekly-report-entry {
+  margin: 0.6rem 0 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  padding: 0.65rem 0.8rem;
+}
+.weekly-report-entry h3,
+.weekly-report-entry p {
+  margin: 0.3rem 0;
+}
+.weekly-report-entry button {
+  min-height: 36px;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid #b7d2f4;
+  border-radius: 7px;
+  background: #fff;
+  color: #155db6;
+  font: inherit;
+  font-size: 0.85rem;
+}
+.weekly-report-entry button:focus-visible {
+  outline: 2px solid #1768e8;
+  outline-offset: 2px;
+}
+.weekly-report-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.85rem;
+}
+.weekly-report-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+.weekly-report-entry textarea {
+  min-height: 8rem;
+}

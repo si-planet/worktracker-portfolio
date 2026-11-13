@@ -1,0 +1,229 @@
+.workspace {
+  margin: 30px auto 0;
+  max-width: 960px;
+}
+.workspace h1 {
+  font-size: clamp(30px, 5vw, 42px);
+  overflow-wrap: anywhere;
+}
+.workspace .description {
+  font-size: 16px;
+}
+.workspace-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-end;
+  font-size: 14px;
+}
+.workspace-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+.workspace-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: white;
+}
+.workspace-card > div {
+  min-width: 0;
+}
+.workspace-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+.workspace-card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+.workspace-card button {
+  flex-shrink: 0;
+}
+.workspace-badge {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 12px;
+  color: var(--accent-ink);
+  background: var(--accent-soft);
+}
+.workspace-block {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.workspace-block h2 {
+  margin: 0 0 20px;
+  font-size: 20px;
+}
+.workspace-block form {
+  max-width: 560px;
+}
+.workspace-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.workspace-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin: 20px 0;
+}
+.workspace select,
+.workspace textarea,
+.workspace-inline input {
+  font: inherit;
+  max-width: 100%;
+  color: var(--ink);
+  min-height: 46px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: white;
+}
+.workspace .form-field select,
+.workspace textarea {
+  width: 100%;
+}
+.workspace-inline input {
+  width: 110px;
+}
+.workspace-inline input[type='date'] {
+  width: 12rem;
+  max-width: 100%;
+}
+.workspace textarea {
+  resize: vertical;
+}
+.workspace-check {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+.workspace-check input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+}
+.workspace-tags {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 0 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.workspace-tags legend {
+  font-size: 14px;
+  font-weight: 600;
+}
+.workspace-tags .field-hint {
+  width: 100%;
+  margin: 0 0 6px;
+}
+.workspace-tags .workspace-check {
+  margin: 0;
+}
+.workspace-selection,
+.workspace-empty {
+  padding: 20px;
+  border-radius: 16px;
+  background: var(--surface-muted);
+  font-size: 15px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.workspace-selection p {
+  margin: 8px 0 0;
+}
+.workspace .form-message,
+.workspace .form-success {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 540px) {
+  .workspace {
+    margin-top: 28px;
+  }
+  .workspace-card {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 18px;
+  }
+  .workspace-columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .workspace-inline {
+    align-items: stretch;
+  }
+  .workspace-inline label {
+    width: 100%;
+  }
+  .workspace-inline select {
+    flex: 1;
+    min-width: 0;
+  }
+  .workspace-block form > .button {
+    width: 100%;
+  }
+}
+
+.workspace-nav {
+  margin-bottom: 20px;
+  gap: 12px 20px;
+}
+.workspace-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--muted);
+}
+.workspace-nav a:hover {
+  color: var(--accent);
+}
+.workspace-card {
+  box-shadow: 0 2px 5px #18233304;
+}
+.workspace-badge {
+  border: 1px solid #d6e5fc;
+  font-weight: 600;
+}
+.workspace-selection,
+.workspace-empty {
+  border: 1px solid var(--line);
+}
+
+.workspace-action-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0;
+}
+.workspace-action-nav a {
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 9px 13px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.workspace-action-nav a:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}

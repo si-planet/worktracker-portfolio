@@ -1,0 +1,30 @@
+{
+  "adapterChecks": 122,
+  "staticHttpChecks": 34,
+  "documentPaths": 5,
+  "httpMountPaths": 3,
+  "deterministicBuildAssets": 8,
+  "lockfileValidation": "npm ci --ignore-scripts --offline --dry-run --audit=false --fund=false passed; no dependencies installed",
+  "runtime": "Node 24.21.0",
+  "buildDependencyVersions": {
+    "esbuild": "0.28.1",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "4.4.3"
+  },
+  "scope": "Executed locally against reused matching dependencies. Clean full npm install, live GitHub Pages and real phone not tested.",
+  "browserAcceptance": {
+    "chrome": [
+      "Nested path docs/ opens synthetic10 task month view.",
+      "Month -> day -> week hash navigation.",
+      "Day and week reload preserve route without SPA fallback.",
+      "Add synthetic task, mark complete, reload preserves checked completion.",
+      "Requested390px viewport measured CSS341px, document scrollWidth341px."
+    ],
+    "consoleErrorsObserved": 0,
+    "limitations": [
+      "Demo reset native confirmation could not be completed due browser control timeout; local-only extra synthetic test item may remain in verification browser.",
+      "Live GitHub Pages, real phone, clean full npm install remain untested."
+    ]
+  }
+}
