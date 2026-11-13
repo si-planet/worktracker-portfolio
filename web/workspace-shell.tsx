@@ -4,6 +4,7 @@ import { currentCompanyWeek, COMPANY_MANAGEMENT_PATH } from '../shared/workspace
 export { currentCompanyWeek } from '../shared/workspace-landing';
 import './workspace-shell.css';
 import { WorkspaceLoading } from './workspace-loading';
+import { workspaceCalendarHref } from '../shared/workspace-calendar-navigation';
 
 class CompanySessionExpired extends Error {}
 
@@ -232,7 +233,28 @@ export function WorkspaceShell({
                     .map((link) => (
                       <a
                         key={link.suffix}
-                        href={`/c/${row.id}/${link.suffix}`}
+                        href={workspaceCalendarHref(row.id, link.suffix, window.location.href)}
+                        onPointerDown={(event) => {
+                          event.currentTarget.href = workspaceCalendarHref(
+                            row.id,
+                            link.suffix,
+                            window.location.href,
+                          );
+                        }}
+                        onFocus={(event) => {
+                          event.currentTarget.href = workspaceCalendarHref(
+                            row.id,
+                            link.suffix,
+                            window.location.href,
+                          );
+                        }}
+                        onClick={(event) => {
+                          event.currentTarget.href = workspaceCalendarHref(
+                            row.id,
+                            link.suffix,
+                            window.location.href,
+                          );
+                        }}
                         aria-current={row.id === companyId && link.active ? 'page' : undefined}
                       >
                         <MenuIcon name={link.icon} />

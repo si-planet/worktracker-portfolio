@@ -70,7 +70,7 @@ for item in manifest['files']:
 source_files = {p.relative_to(root).as_posix() for folder in ['web', 'shared', 'public/icons'] for p in (root / folder).rglob('*') if p.is_file()}
 if source_files != {item['file'] for item in manifest['files']}:
     findings.append({'file': 'verification/source-manifest.json', 'rule': 'source_inventory_mismatch'})
-if len(manifest['files']) != 208 or set(modified) != set(adapted):
+if len(manifest['files']) != 209 or set(modified) != set(adapted):
     findings.append({'file': 'verification/source-manifest.json', 'rule': 'source_baseline_mismatch'})
 build = json.loads((root / 'verification/build.json').read_text())
 if build['output'] != 'docs' or build['routing'] != 'hash':

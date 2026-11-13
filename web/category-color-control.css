@@ -75,6 +75,15 @@
   line-height: 1;
 }
 .category-color-panel p { margin: 8px 0 0; font-size: 12px; }
+@media (forced-colors: active) {
+  .workspace .category-color-control .work-color-option,
+  .workspace .category-color-control .work-color-default {
+    border: 1px solid ButtonText;
+  }
+  .workspace .category-color-control .work-color-option[aria-pressed='true'] {
+    outline: 2px solid Highlight;
+  }
+}
 @media (max-width: 600px), (pointer: coarse) {
   .workspace .category-color-control { --category-control-size: 44px; }
   .workspace .category-color-control .help-hint-trigger { width: 44px; min-width: 44px; height: 44px; min-height: 44px; }

@@ -57,7 +57,7 @@ check('no original network fallback', () => assert.equal(boot.includes('original
 check('importance excluded from demo export', () => assert.ok(boot.includes('entries:state.entries,colors},null,2)')));
 check('source hashes match the reviewed snapshot and explicit adaptations', () => {
   const manifest = JSON.parse(read('verification/source-manifest.json'));
-  assert.equal(manifest.files.length, 208);
+  assert.equal(manifest.files.length, 209);
   const adapted = new Map(manifest.adaptedFiles.map(item => [item.file, item.sha256]));
   for (const item of manifest.files) assert.equal(createHash('sha256').update(read(item.file)).digest('hex'), adapted.get(item.file) || item.sha256, item.file);
 });

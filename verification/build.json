@@ -43,11 +43,11 @@
     },
     {
       "file": "app.js",
-      "sha256": "530e77088c14624f753eaa927af6d9e78fe0274b59ab86a03e2b18655bd6c411"
+      "sha256": "af9ad6ce6f357a398e392ce006ec689caed5449136b142d72739ca3cc594665a"
     },
     {
       "file": "app.css",
-      "sha256": "21525c0bcd480a9f2ea26a2d90135ee03e6415880de0b5de4f95eee58a73b47f"
+      "sha256": "09da8f20fec1ccea7828c7b41273cfa9bc909e3657cc9bc1a13285f496a964f7"
     },
     {
       "file": "demo/banner.css",
