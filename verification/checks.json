@@ -52,5 +52,11 @@
     "outdatedGuideAbsent": true,
     "browserConsoleErrors": 0,
     "scope": "Synthetic public demo. No product data or private history transferred; pending-save recovery uses product implementation, server recovery is not emulated."
+  },
+  "demoPresentation": {
+    "internalRequestCountersRemoved": true,
+    "emptyHistoricalSummaryHiddenInPublicDemo": true,
+    "productSourceUnchanged": true,
+    "browserGuidanceAndWeeklyViewChecked": true
   }
 }

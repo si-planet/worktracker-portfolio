@@ -1,7 +1,5 @@
 .demo-banner{display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;padding:12px 16px;background:#203e38;color:#fff;font:13px/1.5 system-ui}.demo-banner strong{font-size:11px;letter-spacing:.12em}.demo-banner button{border:1px solid #90aaa2;background:transparent;color:white;border-radius:6px;padding:4px 8px;cursor:pointer}.demo-banner span{color:#dcebe6}@media(max-width:600px){.demo-banner{gap:6px;font-size:11px}}
 [hidden]{display:none!important}.workspace-local-review-link,.workspace-review-callout{display:none!important}
-.workspace-review-entry,.month-focus-disclosure,.month-reference-disclosure{display:none!important}
+.workspace-review-entry,.month-focus-disclosure,.month-reference-disclosure,.week-report-column{display:none!important}
 .demo-banner button{min-height:28px;min-width:0;padding:3px 8px;font-size:11px}.demo-banner{padding:8px 12px}.demo-banner strong{white-space:nowrap}@media(max-width:600px){.demo-banner span{flex-basis:100%;text-align:center;order:2}.demo-banner{gap:5px 8px}}
-.demo-scope{font:12px/1.5 system-ui;padding:8px 16px;background:#f3f6f5;color:#31473e}.demo-scope summary{cursor:pointer}.demo-scope p{max-width:70ch}.demo-scope output{font:11px monospace}.demo-banner button{min-height:36px}@media(max-width:600px){.demo-banner button{min-height:44px}.demo-banner span{font-size:11px}}
-
-.demo-scope output{display:block;max-width:100%;white-space:normal;overflow-wrap:anywhere}
+.demo-scope{font:12px/1.5 system-ui;padding:8px 16px;background:#f3f6f5;color:#31473e}.demo-scope summary{cursor:pointer}.demo-scope p{max-width:70ch}.demo-banner button{min-height:36px}@media(max-width:600px){.demo-banner button{min-height:44px}.demo-banner span{font-size:11px}}

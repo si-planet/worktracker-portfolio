@@ -43,7 +43,7 @@
     },
     {
       "file": "app.js",
-      "sha256": "31401b88843ceaa20da650d96797836c683455c052413348a627fb362431e6e0"
+      "sha256": "530e77088c14624f753eaa927af6d9e78fe0274b59ab86a03e2b18655bd6c411"
     },
     {
       "file": "app.css",
@@ -51,7 +51,7 @@
     },
     {
       "file": "demo/banner.css",
-      "sha256": "795b9dbc8ee981f36006e313dd8906a9b89d859c5c6fb29f27f459858bdbc139"
+      "sha256": "8d3597402d42842736b344492f773e9fb802cc115c1f057f88f9c2d57415641e"
     },
     {
       "file": "icons/work-tracker-192.svg",
