@@ -40,8 +40,17 @@
     "desktopColorControlHeight": 40,
     "mobileColorControlHeight": 44,
     "colorSaveReload": "passed; default restored",
-    "dailyControls": "passed: date movement retained, duplicate views/today/document reload removed, current edit help shown",
+    "dailyControls": "passed: duplicate views/today/document reload removed; product-aligned integrated refresh and outdated guide removal",
     "unsavedDailyMemoSurvivesRefresh": true,
     "browserConsoleErrors": 0
+  },
+  "dailyProductAlignment": {
+    "dailyFilesMatchValidatedProduct": 3,
+    "monthlyAndColorFilesUnchanged": 4,
+    "unsavedMemoSurvivesTopRefresh": true,
+    "dateNavigationAndEditorOpen": true,
+    "outdatedGuideAbsent": true,
+    "browserConsoleErrors": 0,
+    "scope": "Synthetic public demo. No product data or private history transferred; pending-save recovery uses product implementation, server recovery is not emulated."
   }
 }

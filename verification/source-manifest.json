@@ -862,17 +862,17 @@
     {
       "file": "web/day-navigation.tsx",
       "sha256": "d667732bbfc841423cd7d7c8f00fddb4db2e3a70c7b931c8b181a998edadcda3",
-      "reason": "User-reviewed calendar, daily controls, and category-size correction; matching production UI handoff prepared separately."
+      "reason": "Daily navigation and integrated memo refresh aligned with validated product behavior; no product data or private Git history included."
     },
     {
       "file": "web/work-entries.tsx",
-      "sha256": "4aaf5973906314e953abbcfd9decb23912516be11eb0344557e0b847441430db",
-      "reason": "User-reviewed calendar, daily controls, and category-size correction; matching production UI handoff prepared separately."
+      "sha256": "e6494613dc2ec6953f5ffb070f561acb68273d25e3fa9316b227c0100fe4e91b",
+      "reason": "Daily navigation and integrated memo refresh aligned with validated product behavior; no product data or private Git history included."
     },
     {
       "file": "web/period-document.tsx",
-      "sha256": "b1ad455baa36d90663df79dcaea83f0e3269ddd77a12e327fa211b06fbbc2b69",
-      "reason": "User-reviewed calendar, daily controls, and category-size correction; matching production UI handoff prepared separately."
+      "sha256": "3be793663e029f4bbd6c2c5c3d5c4343132ad65bc6fb80b05ab988760ea49c55",
+      "reason": "Daily navigation and integrated memo refresh aligned with validated product behavior; no product data or private Git history included."
     }
   ]
 }
