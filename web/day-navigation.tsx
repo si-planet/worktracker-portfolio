@@ -1,8 +1,6 @@
-import { ViewNavigation } from './ui-controls';
 import { getKoreanHoliday } from '../shared/korean-holidays';
 import { dayCalendar, shiftCalendarDay } from '../shared/day-calendar';
 import { zWorkEntryDate } from '../shared/schema/work-entry';
-import { kstDate } from '../shared/work-entry-rules';
 
 function adjacent(date: string, offset: number) {
   try {
@@ -12,15 +10,11 @@ function adjacent(date: string, offset: number) {
   }
 }
 export function DayNavigation({
-  companyId,
   date,
-  projectId,
   disabled,
   onSelect,
 }: {
-  companyId: string;
   date: string;
-  projectId: string;
   disabled: boolean;
   onSelect: (date: string) => void;
 }) {
@@ -75,15 +69,6 @@ export function DayNavigation({
           한국 시간 · {holiday.name ?? (calendar.isWeekend ? '주말' : '평일')}
           {holiday.status === 'unsupported' ? ' · 공휴일 미확인 연도' : ''}
         </p>
-        <button
-          className="text-button"
-          type="button"
-          disabled={disabled}
-          onClick={() => onSelect(kstDate(Date.now()))}
-        >
-          오늘
-        </button>
-        <ViewNavigation companyId={companyId} date={date} projectId={projectId} current="day" />
       </div>
     </section>
   );

@@ -1708,9 +1708,7 @@ export function WorkEntriesPanel({
         <>
           {!unscheduled && dayView && (
             <DayNavigation
-              companyId={companyId}
               date={date}
-              projectId={selectedProjectId}
               disabled={disabled || duplicateReadHold}
               onSelect={(next) => {
                 if (
@@ -2805,11 +2803,11 @@ export function WorkEntriesPanel({
                       {!dateLocked &&
                         original?.kind === 'task' &&
                         ['doing', 'done'].includes(original.status) && (
-                          <p className="field-hint">
-                            날짜를 없애려면 먼저 목록의 ‘미진행으로’를 눌러 저장하고 최신 내용을
-                            선택한 뒤 ‘날짜 미정으로’를 사용하세요. 날짜만 지워 완료 상태를 바꾸지는
-                            않습니다.
-                          </p>
+                          <HelpHint label="날짜 미정으로 변경">
+                            {dayView
+                              ? '진행 상태를 미진행으로 저장한 뒤 업무를 다시 열면 날짜 미정으로 바꿀 수 있습니다.'
+                              : '목록에서 미진행으로 변경한 뒤 업무를 다시 열면 날짜 미정으로 바꿀 수 있습니다.'}
+                          </HelpHint>
                         )}
                       <label>
                         업무 프로젝트{form.kind === 'task' ? ' (필수)' : ' (선택)'}
@@ -3112,6 +3110,7 @@ export function WorkEntriesPanel({
                   userId={userId}
                   kind="daily_note"
                   periodStart={date}
+                  refreshKey={refresh}
                   editing={true}
                   online={online}
                   onExpired={expired}

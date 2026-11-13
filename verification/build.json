@@ -39,15 +39,15 @@
     },
     {
       "file": "index.html",
-      "sha256": "d0604fc2d0aabd0fb20396084dd10f0a1f9759f70cd2a4f5ca2bde6c7caa49ca"
+      "sha256": "ab631069598ba5227c50255fda10c8b78e122c3c0b2efe0adcf4073f34c3f432"
     },
     {
       "file": "app.js",
-      "sha256": "fe775f0b14fc94f9b3d08511c2d0acc7bdddc0894c78a5aa076f00179ccee2bc"
+      "sha256": "090011984ea2ff44fca9a81ef18997403d16edf89874dce8fc89aa9a5d87d098"
     },
     {
       "file": "app.css",
-      "sha256": "b4476cf35cfe8179ca860ece49720612b63f8df4067bdbea9e09f8b69e39d98e"
+      "sha256": "21525c0bcd480a9f2ea26a2d90135ee03e6415880de0b5de4f95eee58a73b47f"
     },
     {
       "file": "demo/banner.css",

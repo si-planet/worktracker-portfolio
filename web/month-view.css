@@ -765,3 +765,45 @@
     border: 1px solid CanvasText;
   }
 }
+
+/* Match the weekly calendar: period centered independently of the action group. */
+.month-view > .month-calendar-toolbar {
+  grid-template-columns: 92px minmax(0, 1fr) 92px;
+  gap: 8px;
+  margin: 8px 0;
+}
+.month-view > .month-calendar-toolbar::before { content: ''; }
+.month-view .month-period-controls { justify-content: center; gap: 8px; }
+.month-view .month-period-controls h2 {
+  margin: 0;
+  font-size: clamp(18px, 2.1vw, 28px);
+  line-height: 1.35;
+  text-align: center;
+}
+.month-view .month-period-controls button {
+  box-sizing: border-box;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-color: transparent;
+  background: transparent;
+  font-size: 12px;
+  line-height: 1;
+}
+.month-view .month-toolbar-actions { gap: 4px; }
+.month-view .month-toolbar-actions > button {
+  box-sizing: border-box;
+  width: 44px;
+  height: 44px;
+  min-height: 44px;
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .month-view > .month-calendar-toolbar { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .month-view > .month-calendar-toolbar::before { display: none; }
+  .month-view .month-toolbar-actions { grid-row: 1; justify-self: end; }
+  .month-view .month-period-controls { grid-row: 2; }
+  .month-view .month-period-controls h2 { font-size: 20px; }
+}

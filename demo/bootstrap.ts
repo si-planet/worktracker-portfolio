@@ -1,20 +1,21 @@
 import './strict-schema';
 import {basePath,logicalPath,routeURL,demoURL,allowedDemoPath} from './route';
 import { createCategoryApi } from './category-api.mjs';
-import { fixture, task, companyId, projectId, project, tags } from './fixture';
-import { zWorkEntryFinal } from '../shared/schema/work-entry';
+import { fixture, companyId, projectId, project, tags } from './fixture';
+import { restoreMonthSeed } from './month-seed';
 const key=`wt-portfolio-demo-v4:${basePath}`;
 const demoMetrics={mockRequests:0,blockedRequests:0,cspViolations:0};
 const updateMetrics=()=>{const el=document.getElementById('demo-network-status');if(el)el.textContent=JSON.stringify(demoMetrics);};
 document.addEventListener('securitypolicyviolation',()=>{demoMetrics.cspViolations++;updateMetrics();});
 let handler: (route:any)=>Promise<any>;
 const {state}=await fixture({route:async(_pattern,fn)=>{handler=fn;}});
-const titles=['대시보드 화면 설계','업무 목록 컴포넌트','API 계약 검토','반응형 달력 점검','접근성 개선','릴리스 문서 작성','코드 리뷰','모바일 입력 테스트','회고 정리','다음 주 계획'];
-state.entries=titles.map((title,i)=>task({id:`019950d3-b800-7000-8000-${String(900+i).padStart(12,'0')}`,title,content:'포트폴리오 시연을 위해 만든 가상 업무입니다.',plannedDate:`2026-10-${String([1,1,2,5,6,7,7,8,8,9][i]).padStart(2,'0')}`,status:i<4?'done':'todo'}));
-let colors: Record<string,any>=Object.fromEntries(state.entries.map((e,i)=>[e.id,{workEntryId:e.id,color:['#587da8','#4f8883','#75875f','#b18c58','#8d7eac'][i%5],version:1}]));
-try {const saved=JSON.parse(localStorage.getItem(key)||'null');if(saved&&Array.isArray(saved.entries)&&saved.entries.length<1000&&saved.entries.every((x:any)=>zWorkEntryFinal.safeParse(x).success)){state.entries=saved.entries;colors=saved.colors||{};}}catch{}
+let saved:unknown;try{saved=JSON.parse(localStorage.getItem(key)||'null');}catch{}
+const restored=restoreMonthSeed(saved);
+state.entries=restored.entries;
+let colors:Record<string,any>=restored.colors;
 const json=(value:any,status=200)=>new Response(JSON.stringify(value),{status,headers:{'Content-Type':'application/json'}});
-const persist=()=>{try{localStorage.setItem(key,JSON.stringify({entries:state.entries,colors}));}catch{}};
+const persist=()=>{try{localStorage.setItem(key,JSON.stringify({entries:state.entries,colors,seedVersion:restored.seedVersion}));}catch{}};
+if(restored.shouldPersist)persist();
 const categories=createCategoryApi({companyId,projects:[project],tags,initial:(()=>{try{return JSON.parse(localStorage.getItem(key+'-categories')||'{}')||{};}catch{return {};}})(),save:(value:any)=>localStorage.setItem(key+'-categories',JSON.stringify(value))});
 let importance:Record<string,any>=Object.fromEntries(state.entries.filter((_,i)=>[0,5].includes(i)).map(e=>[e.id,{workEntryId:e.id,importance:true,version:1}]));try{const saved=JSON.parse(localStorage.getItem(key+'-importance')||'null');if(saved&&typeof saved==='object')importance=saved;}catch{}
 

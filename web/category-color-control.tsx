@@ -81,11 +81,6 @@ export function CategoryColorControl(props: Props) {
           ) : (
             <p>등록된 {kind === 'project' ? '프로젝트' : '태그'}가 없습니다.</p>
           )}
-          <HelpHint label="분류 색상 적용">
-            한 번 지정하면 해당 분류의 모든 업무에 적용됩니다. 지정한 태그색이 프로젝트색보다
-            우선하며, 여러 태그는 태그 관리 순서를 따릅니다. 이 브라우저에 저장되며 내보내기에는 포함되지
-            않습니다.
-          </HelpHint>
         </div>
       )}
     </section>
@@ -187,6 +182,11 @@ function CategoryPicker({
         >
           색상 다시 조회
         </button>
+        <HelpHint label="분류 색상 적용">
+          한 번 지정하면 해당 분류의 모든 업무에 적용됩니다. 지정한 태그색이 프로젝트색보다
+          우선하며, 여러 태그는 태그 관리 순서를 따릅니다. 이 브라우저에 저장되며 내보내기에는 포함되지
+          않습니다.
+        </HelpHint>
       </div>
       {props.error && <p role="status">분류 색상을 불러오지 못했습니다. 다시 조회해 주세요.</p>}
       {message && <p role="status">{message}</p>}

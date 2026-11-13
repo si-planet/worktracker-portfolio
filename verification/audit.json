@@ -1,10 +1,16 @@
 {
-  "filesChecked": 245,
+  "filesChecked": 247,
   "sourceFiles": 208,
   "deployedAssets": 8,
   "modifiedSourceFiles": [
+    "web/category-color-control.css",
     "web/category-color-control.tsx",
-    "web/work-color-picker.tsx"
+    "web/day-navigation.tsx",
+    "web/month-view.css",
+    "web/month-view.tsx",
+    "web/period-document.tsx",
+    "web/work-color-picker.tsx",
+    "web/work-entries.tsx"
   ],
   "findings": [],
   "passed": true,

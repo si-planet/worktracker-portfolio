@@ -841,7 +841,38 @@
     },
     {
       "file": "web/category-color-control.tsx",
-      "sha256": "30a91d84fa0546c99fb55ed360ba2d298e82b95c5bc10dfa34a9eeb8f196897f"
+      "sha256": "3a7697382d84dce3bac4f3ee9aa5ef5406ca3901a1826fe9aad0e73c2648eea2",
+      "reason": "User-reviewed calendar, daily controls, and category-size correction; matching production UI handoff prepared separately."
+    },
+    {
+      "file": "web/month-view.tsx",
+      "sha256": "872ce11bd1b15e645b224206efe287e83bd4f6fd725eb70d31eaa6f46a27ce2a",
+      "reason": "User-reviewed calendar, daily controls, and category-size correction; matching production UI handoff prepared separately."
+    },
+    {
+      "file": "web/month-view.css",
+      "sha256": "fb8176e7d864247e19362ac8882a7c49408f85dbe011c23632e8d6d998551fcd",
+      "reason": "User-reviewed calendar, daily controls, and category-size correction; matching production UI handoff prepared separately."
+    },
+    {
+      "file": "web/category-color-control.css",
+      "sha256": "9f08cf325ceb50d842f428da4573831e6b1b3312f41429029b6be860b3e4eaa8",
+      "reason": "User-reviewed calendar, daily controls, and category-size correction; matching production UI handoff prepared separately."
+    },
+    {
+      "file": "web/day-navigation.tsx",
+      "sha256": "d667732bbfc841423cd7d7c8f00fddb4db2e3a70c7b931c8b181a998edadcda3",
+      "reason": "User-reviewed calendar, daily controls, and category-size correction; matching production UI handoff prepared separately."
+    },
+    {
+      "file": "web/work-entries.tsx",
+      "sha256": "4aaf5973906314e953abbcfd9decb23912516be11eb0344557e0b847441430db",
+      "reason": "User-reviewed calendar, daily controls, and category-size correction; matching production UI handoff prepared separately."
+    },
+    {
+      "file": "web/period-document.tsx",
+      "sha256": "b1ad455baa36d90663df79dcaea83f0e3269ddd77a12e327fa211b06fbbc2b69",
+      "reason": "User-reviewed calendar, daily controls, and category-size correction; matching production UI handoff prepared separately."
     }
   ]
 }

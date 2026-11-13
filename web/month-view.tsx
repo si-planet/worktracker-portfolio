@@ -1,7 +1,7 @@
 import { HelpHint } from './help-hint';
 import { editableDailyNotes } from './daily-sheet-model';
 import { useWorkSourceLabels, WorkSourceBadges, WorkSourceNotice } from './work-source-labels';
-import { RefreshButton, ViewNavigation } from './ui-controls';
+import { RefreshButton } from './ui-controls';
 import { Fragment, useEffect, useRef, useState } from 'react';
 import { isCalendarMonth, monthCalendar, shiftCalendarMonthValue } from '../shared/month-calendar';
 import {
@@ -80,7 +80,6 @@ export function MonthView({
       : `${String(year).padStart(4, '0')}-${kstDate(Date.now()).slice(5, 7)}`;
   };
   const [month, setMonth] = useState(initialMonth);
-  const [input, setInput] = useState(initialMonth);
   const [items, setItems] = useState<CalendarWorkEntry[]>([]);
   const [cursor, setCursor] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -88,7 +87,6 @@ export function MonthView({
   const [error, setError] = useState('');
   const [online, setOnline] = useState(navigator.onLine);
   const [reload, setReload] = useState(0);
-  const [status, setStatus] = useState('active');
   const [denied, setDenied] = useState(false);
   const [today, setToday] = useState(() => kstDate(Date.now()));
   const [selection, setSelection] = useState<string | null>(null);
@@ -112,7 +110,7 @@ export function MonthView({
     from: calendar.firstDate,
     to: calendar.lastDate,
     projectId,
-    status: status === 'canceled' ? ('canceled' as const) : ('active' as const),
+    status: 'active' as const,
   };
   const parameters = calendarWorkParameters(calendarQuery);
   const scope = `${companyId}?${parameters}`;
@@ -160,7 +158,6 @@ export function MonthView({
     );
   function select(next: string) {
     setMonth(next);
-    setInput(next);
     setError('');
     onSelect(next);
   }
@@ -234,8 +231,7 @@ export function MonthView({
     if (Number(month.slice(0, 4)) !== year) {
       const next = `${String(year).padStart(4, '0')}${month.slice(4)}`;
       setMonth(next);
-      setInput(next);
-    }
+      }
   }, [year]);
   useEffect(() => {
     const update = () => setOnline(navigator.onLine);
@@ -336,7 +332,7 @@ export function MonthView({
             disabled={!online || !previous}
             onClick={() => previous && select(previous)}
           >
-            ‹
+            <span aria-hidden="true">◂</span>
           </button>
           <h2 id="month-calendar-title" aria-live="polite">
             {Number(month.slice(0, 4))}년 {Number(month.slice(5))}월
@@ -347,22 +343,10 @@ export function MonthView({
             disabled={!online || !next}
             onClick={() => next && select(next)}
           >
-            ›
+            <span aria-hidden="true">▸</span>
           </button>
         </div>
         <div className="month-toolbar-actions">
-          <RefreshButton
-            type="button"
-            disabled={!online || loading || refreshBusy}
-            title="회사·프로젝트·태그·설정과 월간 기록 다시 조회"
-            onClick={() => {
-              onRefresh?.();
-              setReload((value) => value + 1);
-            }}
-            busy={loading || refreshBusy}
-          >
-            월간 다시 조회
-          </RefreshButton>
           {creationContext && (
             <button
               className="month-add-button"
@@ -376,6 +360,18 @@ export function MonthView({
               <span aria-hidden="true">+</span>
             </button>
           )}
+          <RefreshButton
+            type="button"
+            disabled={!online || loading || refreshBusy}
+            title="회사·프로젝트·태그·설정과 월간 기록 다시 조회"
+            onClick={() => {
+              onRefresh?.();
+              setReload((value) => value + 1);
+            }}
+            busy={loading || refreshBusy}
+          >
+            월간 다시 조회
+          </RefreshButton>
         </div>
       </div>
       {adding && creationContext && (
@@ -394,78 +390,6 @@ export function MonthView({
           }}
         />
       )}
-      <div className="month-aux-controls">
-        <button type="button" disabled={!online} onClick={() => selectDay(kstDate(Date.now()))}>
-          오늘
-        </button>
-        <details className="month-query-options">
-          <summary>보기·조회</summary>
-          <div className="month-view-options">
-            <ViewNavigation
-              companyId={companyId}
-              date={selectedDate}
-              projectId={projectId}
-              current="month"
-            />
-            <a className="month-list-link" href={`/c/${companyId}/search?${parameters}`}>
-              목록
-            </a>
-          </div>
-          <form
-            className="work-date-filter"
-            onSubmit={(event) => {
-              event.preventDefault();
-              if (!online) return;
-              if (isCalendarMonth(input)) select(input);
-              else setError('실제 달력 월을 선택해 주세요.');
-            }}
-          >
-            <label>
-              조회 월
-              <input
-                type="month"
-                min="0001-01"
-                max="9999-12"
-                value={input}
-                disabled={!online}
-                onChange={(event) => setInput(event.target.value)}
-              />
-            </label>
-            <button type="submit" disabled={!online}>
-              월 조회
-            </button>
-            <label>
-              월간 목록 상태
-              <select
-                value={status}
-                disabled={!online}
-                onChange={(event) => setStatus(event.target.value)}
-              >
-                <option value="active">활성 기록</option>
-                <option value="canceled">취소 기록</option>
-              </select>
-            </label>
-          </form>
-
-          <p className="month-range">
-            {calendar.firstDate} ~ {calendar.lastDate} · 일요일 시작 · 한국 시간
-          </p>
-          <p className="month-coverage">
-            {getKoreanHoliday(calendar.firstDate).status === 'verified'
-              ? '대한민국 공휴일 · 2026년 공식 발표 기준'
-              : `공휴일 미확인 연도: ${Number(month.slice(0, 4))}년 · 현재 지원: ${KR_HOLIDAY_YEARS.join(', ')}년 · 주말만 구분합니다.`}
-          </p>
-          <p>현재 프로젝트·목록 상태 기준입니다. 기간 기록은 중복 없이 한 건으로 셉니다.</p>
-        </details>
-      </div>
-      {status === 'canceled' && (
-        <div className="month-applied-filter" role="status">
-          <span>취소 기록 조회 중</span>
-          <button type="button" disabled={!online} onClick={() => setStatus('active')}>
-            활성 기록으로
-          </button>
-        </div>
-      )}
       {!online && <p role="status">오프라인 · 마지막 조회 기록이며 최신 상태가 아닙니다.</p>}
       {error && <p role="alert">{error}</p>}
       {error && shown && ready && (
@@ -482,7 +406,7 @@ export function MonthView({
             {shown && ready
               ? `이번 달 ${cursor ? '불러온' : '전체'} 기록 ${monthEntryCount}개${cursor ? ' · 추가 조회 필요' : ''}${!online || loading || error ? ' · 마지막 조회 기준' : ''}`
               : '월간 기록을 조회하면 이번 달 건수를 표시합니다.'}
-            <span>현재 프로젝트·목록 상태 기준 · 기간 기록은 중복 없이 한 건으로 셉니다.</span>
+
           </p>
           {shown && ready && cursor && (
             <div className="month-load-more">
@@ -655,7 +579,10 @@ export function MonthView({
           </div>
           <HelpHint label="월간 달력">
             날짜를 눌러 제목과 상세를 확인하세요. 같은 프로젝트·태그는 같은 색입니다. 위에서 분류
-            색상을 지정할 수 있습니다.
+            색상을 지정할 수 있습니다. 기간 기록은 중복 없이 한 건으로 셉니다.
+            {getKoreanHoliday(calendar.firstDate).status === 'verified'
+              ? ' 대한민국 공휴일은 2026년 공식 발표 기준입니다.'
+              : ` 현재 공휴일 지원 연도: ${KR_HOLIDAY_YEARS.join(', ')}년. 다른 연도는 주말만 구분합니다.`}
           </HelpHint>
           <section
             id="month-selected-day"

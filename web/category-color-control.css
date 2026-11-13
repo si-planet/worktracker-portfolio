@@ -1,39 +1,81 @@
-.category-color-control {
-  margin: 8px 0 14px;
+.workspace .category-color-control {
+  --category-control-size: 40px;
+  margin: 8px 0;
+  font-size: 13px;
 }
-.category-color-control > button {
-  font-size: 0.8rem;
-  min-height: 36px;
-  padding: 6px 12px;
+.workspace .category-color-control > button,
+.workspace .category-color-control .work-color-actions > button,
+.workspace .category-color-control select,
+.workspace .category-color-control .work-color-default {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--category-control-size);
+  min-height: var(--category-control-size);
+  margin: 0;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface, #fff);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
 }
+.workspace .category-color-control button:disabled { opacity: 0.55; cursor: not-allowed; }
+.workspace .category-color-control button:focus-visible,
+.workspace .category-color-control select:focus-visible,
+.workspace .category-color-control input:focus-visible { outline: 2px solid #3866a6; outline-offset: 2px; }
+.workspace .category-color-control > button[aria-expanded='true'] { background: #edf3fc; }
 .category-color-panel {
+  max-width: 650px;
   padding: 12px;
   margin-top: 8px;
   border: 1px solid var(--line);
-  border-radius: 12px;
-  background: #fff;
+  border-radius: 10px;
+  background: var(--surface, #fff);
 }
-.category-color-target {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+.category-color-target { display: flex; gap: 10px; flex-wrap: wrap; }
+.category-color-target label { display: grid; gap: 6px; min-width: 0; font-size: 13px; }
+.workspace .category-color-control select { max-width: 100%; min-width: 110px; padding-right: 28px; }
+.category-color-panel .work-color-options { align-items: center; gap: 6px; margin-top: 12px; }
+.workspace .category-color-control .work-color-option {
+  box-sizing: border-box;
+  position: relative;
+  flex: 0 0 var(--category-control-size);
+  width: var(--category-control-size);
+  min-width: var(--category-control-size);
+  height: var(--category-control-size);
+  min-height: var(--category-control-size);
+  margin: 0;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
 }
-.category-color-target label {
-  display: grid;
-  gap: 4px;
-  min-width: 0;
-  font-size: 0.8rem;
+.workspace .category-color-control .work-color-option > span { display: block; width: 100%; height: 100%; border-radius: 5px; background: var(--color-swatch); }
+.workspace .category-color-control .work-color-options button[aria-pressed='true'] { border: 2px solid #33445c; }
+.workspace .category-color-control .work-color-custom { display: inline-flex; align-items: center; gap: 8px; margin: 0; font-size: 13px; }
+.workspace .category-color-control input[type='color'] { box-sizing: border-box; width: var(--category-control-size); height: var(--category-control-size); min-height: var(--category-control-size); margin: 0; padding: 4px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface, #fff); }
+.category-color-panel .work-color-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.workspace .category-color-control .work-color-actions > button:first-child { background: #203e38; border-color: #203e38; color: #fff; }
+.workspace .category-color-control .help-hint-trigger {
+  box-sizing: border-box;
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  min-height: 32px;
+  padding: 0;
+  margin: 0;
+  border-radius: 50%;
+  font-size: 13px;
+  line-height: 1;
 }
-.category-color-target select {
-  max-width: 100%;
-  min-height: 36px;
-}
-.category-color-panel .work-color-actions {
-  margin-top: 10px;
-}
-.category-color-panel .work-color-options {
-  margin-top: 10px;
-}
-.category-color-panel .work-color-custom {
-  margin-top: 0;
+.category-color-panel p { margin: 8px 0 0; font-size: 12px; }
+@media (max-width: 600px), (pointer: coarse) {
+  .workspace .category-color-control { --category-control-size: 44px; }
+  .workspace .category-color-control .help-hint-trigger { width: 44px; min-width: 44px; height: 44px; min-height: 44px; }
 }
