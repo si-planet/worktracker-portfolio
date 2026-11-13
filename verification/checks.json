@@ -41,22 +41,42 @@
     "mobileColorControlHeight": 44,
     "colorSaveReload": "passed; default restored",
     "dailyControls": "passed: duplicate views/today/document reload removed; product-aligned integrated refresh and outdated guide removal",
-    "unsavedDailyMemoSurvivesRefresh": true,
     "browserConsoleErrors": 0
   },
   "dailyProductAlignment": {
     "dailyFilesMatchValidatedProduct": 3,
     "monthlyAndColorFilesUnchanged": 4,
-    "unsavedMemoSurvivesTopRefresh": true,
     "dateNavigationAndEditorOpen": true,
     "outdatedGuideAbsent": true,
     "browserConsoleErrors": 0,
-    "scope": "Synthetic public demo. No product data or private history transferred; pending-save recovery uses product implementation, server recovery is not emulated."
+    "scope": "Product daily navigation and work editor alignment retained. Public period-document rendering is replaced at build time because document persistence is outside the demo scope; operating source remains unchanged."
   },
   "demoPresentation": {
     "internalRequestCountersRemoved": true,
     "emptyHistoricalSummaryHiddenInPublicDemo": true,
     "productSourceUnchanged": true,
     "browserGuidanceAndWeeklyViewChecked": true
+  },
+  "periodDocumentCapability": {
+    "publicDocumentWritingSupported": false,
+    "productSourceUnchanged": true,
+    "buildOnlyAdapter": "demo/period-document.tsx",
+    "notice": "공개 데모에서는 일간 메모 작성·저장을 제공하지 않습니다.",
+    "localChromeDesktop": {
+      "noticeVisible": true,
+      "textareaCount": 0,
+      "buttonCount": 0,
+      "recordRefreshPreservesNotice": true,
+      "threeFixtureEntriesPreserved": true,
+      "weekNavigationPreservesSelectedDate": true
+    },
+    "mobileRecheck": "Not completed: browser control timed out while changing viewport; no mobile acceptance claimed for this follow-up.",
+    "checksRerun": {
+      "adapter": 122,
+      "monthSeed": 13,
+      "calendarNavigation": 60,
+      "staticHttp": 34
+    },
+    "scope": "Only synthetic public demo files. No operating API, account, database, or work record modified."
   }
 }
