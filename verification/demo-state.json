@@ -1,6 +1,6 @@
 {
   "scope": "Public importance identity and interactive mutation timestamps",
-  "status": "local-verified-browser-pending",
+  "status": "published-browser-verified-with-listed-limits",
   "baselineReproduction": {
     "defaultImportanceMovedAfterFirstExampleDeletion": 2,
     "completionUsedFixedOctoberTimestamp": true
@@ -22,8 +22,34 @@
     "Public JSON download remains a partial work-data export, not a full backup"
   ],
   "browser": {
-    "status": "pending",
-    "scope": "Native confirmation recovery and post-build UI verification belong to main reviewer"
+    "status": "passed-for-listed-scenarios",
+    "runtimeCommit": "601457d",
+    "surface": "Chrome public demo; separate IAB profile cleanup",
+    "operator": "main reviewer",
+    "completedAt": {
+      "timezone": "Asia/Seoul",
+      "matchesInteractionTime": true,
+      "scope": "Existing synthetic test entry marked complete after the runtime fix",
+      "observedLocalTime": "2026-11-14T02:37:45+09:00"
+    },
+    "existingCreatedAt": "Historical October timestamp retained; saved records were not rewritten",
+    "reload": {
+      "importanceChecked": true,
+      "completed": true
+    },
+    "cleanup": {
+      "method": "Clear importance and individually delete only explicitly identified synthetic test entries",
+      "chromeMonthRecordsAfterCleanup": 24,
+      "iabMonthRecordsAfterCleanupAndReload": 24,
+      "originalSeedPreserved": true
+    },
+    "consoleErrors": 0,
+    "limits": [
+      "Native full-reset confirmation acceptance was not retried and remains unverified",
+      "Deleting default seed records to check importance identity was covered by the 19 targeted automated tests, not by deleting original examples in the browser",
+      "New creation/edit timestamps are covered by targeted automated tests; this follow-up browser scenario verifies completion time",
+      "No physical phone or operating service acceptance is claimed"
+    ]
   },
   "productionModified": false
 }
